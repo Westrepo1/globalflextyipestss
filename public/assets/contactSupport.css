@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+  background-color: black;
+    width: 428px;
+    height: 100vh;
+    overflow-x: hidden !important;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  
+  /* ====================== Navbar ================= */
+  .navbar-top {
+    width: 428px;
+    margin: auto;
+    text-align: center;
+    height: 68px;
+    background: linear-gradient(180.07deg, rgba(255, 255, 255, 0.165) 0.06%, rgba(255, 255, 255, 0.085) 54.47%, rgba(232, 238, 255, 0.265) 129.51%);
+    border: 1px solid #fff5f5;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+  }
+  
+  .navbar-top .container .navbar-left {
+    margin: 23px 0 0 28px;
+    width: 30px;
+    height: 30px;
+    border-radius: 7px;
+    display: flex;
+  }
+  .navbar-top .container .navbar-left .hamburger {
+    padding: 7px 4px 7px 4px;
+  }
+  .notification {
+    width: 17.84px;
+    height: 19.53px;
+    margin: auto !important;
+    margin-left: 260px !important;
+    float: right !important;
+  }
+  .avatar {
+    width: 4em !important;
+    margin: auto;
+    margin-left: 16px !important;
+    padding-right: 31px;
+  }
+  /* ====================== End Navbar ===================== */
+  
+  .jumbotron .container .content {
+    width: 402px;
+    height: 350px;
+    background: linear-gradient(142.23deg, rgba(255, 255, 255, 0.04) -9.08%, rgba(232, 238, 255, 0.265) 101.79%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 42px;
+    margin-top: 55px;
+  }
+  .writer {
+    color: white;
+    font-size: 8px;
+    text-align: center;
+    line-height: 19px;
+    position: relative;
+    bottom: 1.3em;
+    
+  }
+  
+  .title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: sans-serif;
+    color: #ffffff;
+    margin-left: 33px;
+    padding-top: 30px;
+  }
+  
+  hr {
+    width: 354px;
+    height: 2px;
+    background: #d9d9d9;
+    display: block;
+    margin: auto;
+    margin-bottom: 9px;
+  }
+  .wrapper {
+    width: 376px;
+    height: 180px;
+    margin: auto;
+    margin-top: 40px;
+    border: 1px solid #ffffff;
+    border-radius: 14px;
+  }
+  .contentFill {
+    width: 117.25px;
+    height: 48px;
+    background: linear-gradient(142.23deg, rgba(255, 255, 255, 0.295) -9.08%, rgba(255, 255, 255, 0.34) 101.79%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    border-radius: 7px;
+    margin: auto;
+    margin-top: 30px;
+    border: 1px solid #ffffff;
+    position: relative;
+  }
+  .inbox {
+    position: relative;
+    left: 2.3em;
+    bottom: 1em;
+  }
+  .wrapperflex {
+    display: flex;
+  }
+  @media (min-width: 428px) {
+    body {
+      margin: auto;
+   background-color: black;
+      width: 428px;
+      height: 100vh;
+      text-align: center !;
+    }
+  }
+  

@@ -1,0 +1,269 @@
+<%- include('partials/dashboardHeader')%>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" /> -->
+    <!-- css -->
+    <link rel="stylesheet" href="assets/depositMethod.css" />
+    <title>accountUpgrade</title>
+    <script src="../plugins/sweetalerts/promise-polyfill.js"></script>
+    <link href="../plugins/sweetalerts/sweetalert.css" rel="stylesheet" type="text/css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700" rel="stylesheet" />
+    <style>
+        /*------ Google Font Style ------ */
+        body {font-family:'Roboto'!important;}
+    </style>
+  </head>
+  <body>
+
+    <!-- ============= Navbar ========== -->
+    <section class="navbar-top">
+      <div class="container">
+        <div class="navbar-left">
+        <a href="navbarPage"  ><img src="assets/vector/hamburger.svg" alt="hamburger" class="hamburger" id="btn" /></a>
+          <!--<a href="profile" class="d-flex"><img src="assets/image/avatar.png" alt="avatar" class="profile" /></a>
+        </div>-->
+        <div class="navbar-right"></div>
+      </div>
+    </section>
+    <!-- ======= End Navbar ======== -->
+
+    <section class="jumbotron"  style="background-color: black;">
+      <div class="container">
+        <div class="contentUp">
+          <p class="writer">Account Upgrade</p>
+          <hr />
+          <h1 class="title mt-3 mb-2">Upgrade Plan</h1>
+          <form action="/accountUpgrade/<%=user._id%>" method="post" autocomplete="off" id="withdrawal-form" class="was-validated" enctype="multipart/form-data">
+          <div class="dropdown mt-3">
+            <label for="input" class="label mb-2">Upgrade Plans</label>
+            <select style="color:#000; background-color: white;" class="btn btn-secondary" name=" amount" id="amount" class="form-control" required>
+          <option value="" style="color:#fff;"><b>---Select Plan---</b></option>
+          <option value="gold">Gold</option>
+          <option value="premium">Premium</option>
+          <option value="daimond">Daimond</option>
+          <option value="bronze">Bronze</option>
+        </select>
+          </div>
+          <div class="dropdown mb-3 mt-2">
+            <label for="input" class="label mb-2">Payment Method</label>
+            <select style="color:#00000076; background-color: white;" class="btn btn-secondary" name="method" id="method" class="form-control" required>
+                <option value="method" style="color:#fff;"><b>---Select Method---</b></option>
+                                                <option value="Bitcoin">Bitcoin</option>
+                                                <option value="Ethereum">Ethereum</option>
+                                                <option value="Litecoin">Usdt</option>
+                                                <!-- <option value="BitcoinCash">Shiba</option> -->
+            </select>
+          </div>
+          <div class="dropdown mb-3 mt-2" id="field1" style="display: None;">
+            <label for="input" class="label mb-2">Bitcoin Wallet barcode</label><br>
+            <img src="../wp-admin/uploads/btc20.jpg" alt="bitcoin code" style="max-width:40%; padding-left:30px;">
+          </div>
+          <div class="dropdown mb-3 mt-2" id="field12" style="display: None;">
+            <label for="input" class="label mb-2">copy BTC Wallet Address</label>
+            <input class="btn btn-secondary" disabled value="bc1qrk5s965uaqapzzwu6e0fex7j9lcf69fwj3wmh4">
+          </div>
+          <div class="dropdown mb-3 mt-2" id="field2" style="display: None;">
+            <label for="input" class="label mb-2">Ethereum Wallet barcode</label><br>
+            <img src="../wp-admin/uploads/eth20.jpg" alt="bitcoin code" style="max-width:40%; padding-left:30px;">
+          </div>
+          <div class="dropdown mb-3 mt-2" id="field13" style="display: None;">
+            <label for="input" class="label mb-2">copy Ethereum Wallet Address</label>
+            <input class="btn btn-secondary" disabled value=" 0x5d80aF6884392a22270723477D1 d1E7D74170B59 ">
+          </div>
+          <div class="dropdown mb-3 mt-2" id="field3" style="display: None;">
+            <label for="input" class="label mb-2">Usdt Wallet Barcode</label><br>
+            <img src="../wp-admin/uploads/usdt20.jpg
+" alt="bitcoin code" style="max-width:40%; padding-left:30px;">
+          </div>
+          <div class="dropdown mb-3 mt-2" id="field14" style="display: None;">
+            <label for="input" class="label mb-2">Usdt Wallet Address</label>
+            <input class="btn btn-secondary" disabled value="0x25c7e0fCBc7cb9643361de2A7380AC56a2fb3e59
+">
+          </div>
+          <div class="dropdown mb-3 mt-2" id="field4" style="display: None;">
+            <label for="input" class="label mb-2">Shiba Wallet Barcode</label><br>
+            <img src="../wp-admin/uploads/shiba.jpeg" alt="bitcoin code" style="max-width:40%; padding-left:30px;">
+          </div>
+          <div class="dropdown mb-3 mt-2" id="field15" style="display: None;">
+            <label for="input" class="label mb-2">Shiba Wallet Address</label>
+            <input class="btn btn-secondary" disabled value="0x25c7e0fCBc7cb9643361de2A7380AC56a2fb3e59">
+          </div>
+          
+          <label for="input" class="label">Upload Your Proof of payment:</label>
+          <br />
+          <div class="file">
+            <input class="fileUplod input" type="file" name="image" id="image" accept="image/" required />
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+            <label class="form-check-label" for="flexCheckDefault"> Agree to Terms & Conditions? </label>
+          </div>
+          <button type="submit" class="btn-main" name="uprequest">Submit</button>
+          </form>
+                  </div>
+      </div>
+    </section>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    
+    <script src="../plugins/jquery-3.1.1.min.js"></script>
+    <script src="../plugins/sweetalerts/sweetalert2.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#method").change(function() {
+                if ($(this).val() == "Bitcoin") {
+                    $("#field1").fadeIn();
+                    $("#field2").hide();
+                    $("#field3").hide();
+                    $("#field4").hide();
+                    $("#field5").hide();
+                    $("#field6").hide();
+                    $("#field7").hide();
+                    $("#field8").hide();
+                    $("#field9").hide();
+                    $("#field10").hide();
+                    $("#field11").hide();
+                    $("#field12").fadeIn();
+                    $("#field13").hide();
+                    $("#field14").hide();
+                    $("#field15").hide();
+                    $('#wallet-number').attr("placeholder", "Bitcoin");
+                    //$('#amount-fees').val('2%')
+                } else if ($(this).val() == "Ethereum") {
+                    $("#field2").fadeIn();
+                    $("#field1").hide();
+                    $("#field3").hide();
+                    $("#field4").hide();
+                    $("#field5").hide();
+                    $("#field6").hide();
+                    $("#field7").hide();
+                    $("#field8").hide();
+                    $("#field9").hide();
+                    $("#field10").hide();
+                    $("#field11").hide();
+                    $("#field12").hide();
+                    $("#field13").fadeIn();
+                    $("#field14").hide();
+                    $("#field15").hide();
+                    $('#wallet-number').attr("placeholder", "Ethereum");
+                    //$('#amount-fees').val('4%')
+                } else if ($(this).val() == "Litecoin") {
+                    $("#field3").fadeIn();
+                    $("#field1").hide();
+                    $("#field2").hide();
+                    $("#field4").hide();
+                    $("#field5").hide();
+                    $("#field6").hide();
+                    $("#field7").hide();
+                    $("#field8").hide();
+                    $("#field9").hide();
+                    $("#field10").hide();
+                    $("#field11").hide();
+                    $("#field12").hide();
+                    $("#field13").hide();
+                    $("#field14").fadeIn();
+                    $("#field15").hide();
+                    $('#wallet-number').attr("placeholder", "Litecoin");
+                    //$('#amount-fees').val('4%')
+                } else if ($(this).val() == "BitcoinCash") {
+                    $("#field4").fadeIn();
+                    $("#field1").hide();
+                    $("#field2").hide();
+                    $("#field3").hide();
+                    $("#field5").hide();
+                    $("#field6").hide();
+                    $("#field7").hide();
+                    $("#field8").hide();
+                    $("#field9").hide();
+                    $("#field10").hide();
+                    $("#field11").hide();
+                    $("#field12").hide();
+                    $("#field13").hide();
+                    $("#field14").hide();
+                    $("#field15").fadeIn();
+                    $('#wallet-number').attr("placeholder", "BitcoinCash");
+                    //$('#amount-fees').val('4%')
+                } else if ($(this).val() == "Skrill") {
+                    $("#field5").fadeIn();
+                    $("#field1").hide();
+                    $("#field2").hide();
+                    $("#field3").hide();
+                    $("#field4").hide();
+                    $("#field6").hide();
+                    $("#field7").hide();
+                    $("#field8").hide();
+                    $("#field9").hide();
+                    $("#field10").hide();
+                    $("#field11").hide();
+                    $("#field12").hide();
+                    $("#field13").hide();
+                    $("#field14").hide();
+                    $("#field15").hide();
+                    $('#wallet-number').attr("placeholder", "Skrill");
+                    //$('#amount-fees').val('3%')
+                } else if ($(this).val() == "Paypal") {
+                    $("#field6").fadeIn();
+                    $("#field1").hide();
+                    $("#field2").hide();
+                    $("#field3").hide();
+                    $("#field4").hide();
+                    $("#field5").hide();
+                    $("#field7").hide();
+                    $("#field8").hide();
+                    $("#field9").hide();
+                    $("#field10").hide();
+                    $("#field11").hide();
+                    $("#field12").hide();
+                    $("#field13").hide();
+                    $("#field14").hide();
+                    $("#field15").hide();
+                    $('#wallet-number').attr("placeholder", "Paypal");
+                    //$('#amount-fees').val('2%')
+                } else if ($(this).val() == "Bank Transfer") {
+                    $("#field7").fadeIn();
+                    $("#field8").fadeIn();
+                    $("#field9").fadeIn();
+                    $("#field10").fadeIn();
+                    $("#field11").fadeIn();
+                    $("#field1").hide();
+                    $("#field2").hide();
+                    $("#field3").hide();
+                    $("#field4").hide();
+                    $("#field5").hide();
+                    $("#field6").hide();
+                    $("#field12").hide();
+                    $("#field13").hide();
+                    $("#field14").hide();
+                    $("#field15").hide();
+                    $('#wallet-number').attr("placeholder", "Bank Transfer");
+                    //$('#amount-fees').val('5%')
+                } else {
+                    $("#field1").hide();
+                    $("#field2").hide();
+                    $("#field3").hide();
+                    $("#field4").hide();
+                    $("#field5").hide();
+                    $("#field6").hide();
+                    $("#field7").hide();
+                    $("#field8").hide();
+                    $("#field9").hide();
+                    $("#field10").hide();
+                    $("#field11").hide();
+                    $("#field12").hide();
+                    $("#field13").hide();
+                    $("#field14").hide();
+                    $("#field15").hide();
+                }
+            });
+        });
+    </script>
+
+  
+
+
+<%- include('partials/dashboardFooter')%>

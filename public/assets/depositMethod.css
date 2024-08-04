@@ -1,0 +1,250 @@
+body {
+    margin: 0;
+  background-color: black;
+    width: 428px;
+    height: 926px;
+  }
+  a {
+    text-decoration: none !important;
+  }
+  
+  /* Navbar */
+  .navbar-top {
+    width: 428px;
+    margin: auto;
+    text-align: center;
+    height: 68px;
+    background: linear-gradient(180.07deg, rgba(255, 255, 255, 0.165) 0.06%, rgba(255, 255, 255, 0.085) 54.47%, rgba(232, 238, 255, 0.265) 129.51%);
+    border: 1px solid #fff5f5;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+  }
+  
+  .navbar-top .container .navbar-left {
+    margin: 23px 0 0 28px;
+    width: 30px;
+    height: 30px;
+    border-radius: 7px;
+    display: flex;
+  }
+  .hamburger {
+    padding: 7px 4px 7px 4px;
+  }
+  .notification {
+    width: 17.84px;
+    height: 19.53px;
+    margin: auto !important;
+    margin-left: 264px !important;
+    float: right !important;
+  }
+  .avatar {
+   width: 4em !important;
+    margin: auto;
+    margin-left: 16px !important;
+    padding-right: 31px;
+  }
+  /* ====================== End Navbar ===================== */
+  
+  .jumbotron .container .content {
+    width: 402px;
+    height: 950px;
+    background: linear-gradient(142.23deg, rgba(255, 255, 255, 0.04) -9.08%, rgba(232, 238, 255, 0.265) 101.79%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 42px;
+    margin-top: 55px;
+  }
+  .contentUp {
+    width: 402px;
+    height: 900px;
+    background: linear-gradient(142.23deg, rgba(255, 255, 255, 0.04) -9.08%, rgba(232, 238, 255, 0.265) 101.79%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 42px;
+    margin-top: 55px;
+  }
+  .writer {
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    font-family: sans-serif;
+    margin-left: 40px;
+    padding-top: 18px;
+  }
+  .title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: sans-serif;
+    color: #ffffff;
+    margin-left: 33px;
+  }
+  .btn-secondary {
+    width: 352px;
+    height: 44px;
+    background: none;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    display: block;
+    margin: auto;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: rgba(255, 255, 255, 0.3);
+    text-align: start;
+  }
+  .btn-secondary:hover,
+  .btn-secondary:active {
+    background: none !important;
+  }
+  .dropdown-menu {
+    width: 352px;
+    background: linear-gradient(142.23deg, #c0c0c0 -9.08%, #c19797 101.79%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+  }
+  
+  .dropdown-item {
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+    color: #000000;
+    width: 344px;
+    height: 26px;
+    background: rgba(255, 255, 255, 0.32);
+    border-radius: 7px;
+    display: block;
+    margin: auto !important;
+    margin-top: 2px !important;
+  }
+  
+  .dropdown-item:hover,
+  .dropdown-item:active {
+    background: linear-gradient(180deg, #ff000f 0%, #ee0000 100%);
+    color: white;
+  }
+  .dropdown-toggle {
+    margin-left: 203px;
+  }
+  hr {
+    width: 354px;
+    height: 2px;
+    background: #d9d9d9;
+    display: block;
+    margin: auto;
+    margin-bottom: 9px;
+  }
+  
+  .label {
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffff;
+    margin-left: 33px;
+    margin-top: 15px;
+  }
+  .textarea {
+    width: 352px;
+    background: none;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    display: block;
+    margin: auto !important;
+    margin-top: 10px !important;
+    margin-bottom: 20px;
+  }
+  .textarea::placeholder {
+    padding-top: 12px;
+    padding-left: 16px;
+  }
+  .input {
+    width: 352px;
+    height: 44px;
+    background: none;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    display: block;
+    margin: auto !important;
+    margin-top: 10px !important;
+    margin-bottom: 20px;
+    color: white;
+    padding-left: 10px;
+  }
+  .input::placeholder {
+    padding-left: 10px !important;
+  }
+  .fileUplod {
+    padding: 5px 0 5px 11px;
+    color: white;
+  }
+  .form-check {
+    margin-left: 33px;
+    margin-top: 20px;
+  }
+  .form-check-input {
+    width: 12px;
+    height: 12px;
+    background: linear-gradient(180deg, #d9d9d9 0%, #f7f7f7 99.99%, #b3b3b3 100%);
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    margin: auto;
+  }
+  .form-check-label {
+    margin: auto;
+    display: block;
+    line-height: 10px;
+    color: #ffffff;
+  }
+  .btn-main {
+    color: white;
+    width: 62px;
+    height: 28px;
+    background: linear-gradient(0deg, #004f1b -105.88%, #00ff66 100%);
+    mix-blend-mode: normal;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 17px;
+    border: none;
+    margin-left: 292px;
+    margin-top: 9px;
+  }
+  .desc {
+    font-size: 10px;
+  }
+  .contentDepositMethod {
+    width: 402px;
+    height: 840px !important;
+    background: linear-gradient(142.23deg, rgba(255, 255, 255, 0.04) -9.08%, rgba(232, 238, 255, 0.265) 101.79%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 42px;
+    margin-top: 55px;
+  }
+  .paymentMethod {
+    color: white !important;
+  }
+  .dropdownDepositMethod {
+    margin-left: 245px;
+  }
+  .withdrawalContent {
+    width: 402px;
+    height: 1000px !important;
+    background: linear-gradient(142.23deg, rgba(255, 255, 255, 0.04) -9.08%, rgba(232, 238, 255, 0.265) 101.79%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 42px;
+    margin-top: 55px;
+  }
+  .feeInput,
+  .feeInput::placeholder {
+    color: white !important;
+    padding-left: 10px;
+  }
+  @media (min-width: 428px) {
+    body {
+      margin: auto;
+     background-color: black;
+      width: 428px;
+      height: 926px;
+      text-align: center !;
+    }
+  }
+  

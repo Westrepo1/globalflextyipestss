@@ -1,0 +1,122 @@
+
+<%- include('partials/dashboardHeader')%>
+
+<head>
+	<title>MENU</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<link rel="stylesheet" href="assetss/index.css"> 
+
+</head>
+<body>
+    
+
+<section class="content">
+
+<div class="d-flex justify-content-between  from-top ">
+	<div class="menu">
+		MENU
+	</div> 
+	<div id="google_translate_element"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+	<div>
+		<a class="btn1" href="/logout">logout</a>
+	</div>
+</div>
+<div style="padding: 20px;"></div>
+
+<div class="d-flex justify-content-start ">
+	<a href="#"><a href="/account" class="ph">
+    <img src="assetss/img/pers.svg" alt="PROFILE" /> </a>
+	<div class="sl">
+		<div class="name">
+		<%=user.fullname%></div>
+		<div class="email">
+		<%=user.email%></div>
+	</div>
+</div>
+
+
+<div style="padding: 10px;"> </div>
+<div class="mycard " style="padding-top: 3%;">
+	<table>
+		<tr>
+			<td class="lsi">Full Name:</td>
+			<td><h5><%=user.fullname%></h5></td>
+		</tr>
+		<tr>
+			<td class="lsi">Join Date:</td>
+			<td><h6><%=user.createdAt%></h6></td>
+		</tr>
+		<tr>
+			<td class="lsi">Kyc Status:</td>
+			<td class="desc text-light">
+		<span style="color:red;"><h6><%=user.verifiedStatus%></h6></span></td>
+                                                                </td>
+		</tr>
+		<tr>
+			<td class="lsi">Account Type:</td>
+			<td><h6><%=user.level%></h6></td>
+		</tr>
+	</table>
+</div>
+ 
+<div class="d-flex flex-column " style="padding-top: 3%;">
+	<a class="div-btn" href="/dashboard">
+		<span class="linkcss">Dashboard</span>
+	</a>
+		<a class="div-btn" href="/verify">
+		<span class="linkcss">Verify Account</span>
+	</a>
+	 	<a class="div-btn" href="/deposit">
+		<span class="linkcss">Deposit</span>
+	</a>
+	<a class="div-btn" href="/withdrawal">
+		<span class="linkcss">Withdrawal</span>
+	</a>
+	<!--<a class="div-btn" href="signal-package">
+		<span class="linkcss">Signal Subscribtion</span>
+	</a>-->
+	<a class="div-btn" href="/trading-live">
+		<span class="linkcss">Live Trades</span>
+	</a>
+	
+	<a class="div-btn" href="/accountUpgrade">
+		<span class="linkcss">Account Upgrade</span>
+	</a>
+
+	<a class="div-btn" href="/tradinghistory/<%=user._id%>">
+		<span class="linkcss">Livetrade History</span>
+	</a>
+
+	
+	<a class="div-btn" href="/depositHistory/<%=user._id%>">
+		<span class="linkcss">Deposit History</span>
+	</a>
+
+	<a class="div-btn" href="/widthdrawHistory/<%=user._id%>">
+		<span class="linkcss">Widthdraw History</span>
+	</a>
+	<!-- <a class="div-btn" href="/transactions/user._id%>">
+		<span class="linkcss">Transaction History</span>
+	</a> -->
+	
+</div>
+
+
+</div>
+
+
+</section>
+
+    <%- include('partials/dashboardFooter')%>

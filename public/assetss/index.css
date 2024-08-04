@@ -1,0 +1,387 @@
+
+@font-face {
+    font-family: "Inter";
+    src: url("static/Inter-Regular.ttf"); 
+    }
+    @font-face {
+    font-family: "Montserrat";
+    src: url("static/Montserrat-SemiBold.ttf"); 
+    }
+    
+    .we{
+        font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    /*
+    line-height: 12px;*/
+    
+    color: #FFFFFF;
+    
+    }
+    
+    body {
+     background: #000000;
+    }
+    
+    .content {
+      max-width: 100%;
+      height: 100vh;
+      overflow-y: scroll;
+      margin: auto;
+      color: white;
+      padding: 10px;
+    }
+    
+    .ph{
+         
+     border-radius: 50%;
+     height: 40px;
+     width: 40px;
+     overflow: hidden;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    
+    
+    }
+    
+    
+    
+    .content{
+        background-image: url(../assetss/img/tr2.png), url(../assetss/img/cl.png), url(../assetss/img/br.png) ; 
+        background-position: top right,center left, bottom right; 
+        background-repeat: no-repeat,no-repeat,no-repeat; 
+        background-attachment: fixed,fixed, fixed;
+        background-size: 150px,150px,150px;
+    }
+    
+    /*
+    .content{
+        background-image: url(../assets/img/mob.png), url(../assets/img/cl.png), url(../assets/img/br.png) ; 
+        background-position: top right,center left, bottom right; 
+        background-repeat: no-repeat,no-repeat; 
+        background-attachment: scroll, fixed;
+        background-size: 150px,150px;
+    }
+    */
+    .from-top{
+        margin-top: 1.01%;
+    }
+    .from-topx3{
+        margin-top:9%;
+    }
+    
+    .mycard{
+        border: 1px solid rgba(255, 255, 255, 0.24);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 20px;
+    padding: 4% 3%;
+    padding-top: 4%;
+    }
+    
+    .mheader{/*
+    margin-bottom: 5px;*/
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+    
+    
+    color: #5F5F60;
+    
+    }
+    
+    .ph img{
+     width: 40px;
+    }
+    
+    .uname{
+        font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+    
+    
+    color: #FFFFFF;
+    white-space: nowrap;
+    margin-right: 5px;
+    }
+    
+    .mfigures{
+        font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 42px;
+    
+    color: #FFFFFF;
+    }
+    
+    .basic{
+        font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+    
+    
+    color: #E2A300;
+    }
+    .ts{
+        font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+    
+    
+    color: #FFFFFF;
+    }
+    
+    .non{
+        
+     
+        margin-left: 6%;
+        margin-right: 6%;
+        margin-bottom: 8%;
+        font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 6px;
+    /*
+    line-height: 7px;*/
+    
+    color: #FF0000;
+    }
+    
+    
+    .score{
+        margin-top: 5%;font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    
+    color: #FFFFFF;
+    }
+    
+    
+    .from-bottom{
+        margin-bottom: 8%;
+    }
+    
+    .small-box{
+        background: linear-gradient(104.96deg, #212121 10.25%, rgba(33, 33, 33, 0) 84.09%);
+    border: 1px solid #3F3F3F;
+    border-radius: 10px;
+    padding: 5% 0%;
+    padding-left: 5%
+    
+    }
+    .small-box-title{
+    
+    margin-top: 5%;
+        padding:3%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+    
+    
+    color: #5F5F60;
+    
+    }
+    
+    .small-box-val{
+    
+        padding:3%;
+        font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+    margin-bottom: 5%;
+    }
+    .small-box-success{
+        color: #76FF73;
+    }
+    
+    .small-box-danger{
+        color: #E01F1F;
+    }
+    .small-box-gold{
+        color: #FFE600;
+    }
+    
+    .mfooter{
+        /*
+        border-top: 1px solid #FFFFFF;*/
+    
+    background-color: #000;
+    /*
+    position: fixed;
+    bottom: 0px;*/
+    width: 100%;
+    height: 10vh;
+    }
+    
+    .f{
+        font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 10px;
+    /* 
+    line-height: 100%;
+    font-weight: 600;
+    identical to box height, or 10px */
+    
+    
+    color: #FFFFFF;
+    
+    }
+    
+    .div-btn{
+    background: rgba(26, 26, 26, 0.47);
+    border: 1px solid #6B6B6B;
+    border-radius: 10px;
+    /*
+    
+    padding: 5%;
+    margin:3% 6%;*/
+    
+    padding: 6% 3%; 
+    
+    margin-bottom:3%;
+    
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    /* identical to box height, or 14px */
+    
+    
+    color: #FFFFFF;
+    
+    }
+    .linkcss{
+    
+    padding-left: 3%;
+    }
+    .lsi-mp{
+        margin:3% 2%;
+    padding: 5%;
+    }
+    .lsi{
+        width: 50%;
+    
+        font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+    
+    color: #FFFFFF;
+    padding-left: 3%;
+    
+    
+    }
+    tr{
+        padding-top: 8%;
+    }
+    td{
+        font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    
+    color: #FFFFFF;
+    
+    padding: 3% 0%;
+    
+    }
+    
+    .name{
+        font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+    
+    color: #FFFFFF;
+    
+    }
+    .email{
+        font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    
+    color: #FFFFFF;
+    
+    }
+    .btn1{
+        border: 1px solid rgba(207, 67, 67, 0.84);
+    border-radius: 12px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    
+    color: #FFFFFF;
+    
+    padding: 10px 20px;
+    }
+    
+    .menu{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    
+    color: #FFFFFF;
+    
+    margin-left: 2%;/*
+    padding-left: 5%;*/
+    }
+    
+    .sl{
+        padding-left: 10px;
+    }
+    .div-btn{
+        text-decoration: none;
+    }
+    a.div-btn:link {
+      text-decoration: none;
+    }
+    
+    a.div-btn:visited {
+      text-decoration: none;
+    }
+    
+    
+    
+    a.div-btn:active {
+      text-decoration: none;
+    }
+    
+    a.div-btn:hover{
+        border: 1px solid red;
+        border-radius: 5px;
+        color: red;
+    }
+    

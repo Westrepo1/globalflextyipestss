@@ -1,0 +1,471 @@
+
+<%- include('partials/dashboardHeader')%>
+<!-- <!doctype html> -->
+<!-- <html lang="en-uk">
+<head> -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+    <meta name="keywords" content="investment, Forex, Trading, Bitcoin, Cryptocurrency, Global investment, Live Trade, Trading class, indics">
+    <meta name="author" content="Paul HubWeb & Tech">
+    <meta name="theme-color" content="#313131" />
+    <!-- Site Properties -->
+    <title>Edit Details </title>
+    <link rel="shortcut icon" href="../img/Signals-Alert-3.png" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" href="../img/Signals-Alert-3.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Typography CSS -->
+    <link rel="stylesheet" href="css/typography.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header {
+            overflow: none;
+            background-color: none;
+            padding: 20px 10px;
+            padding-left: 5px;
+            position: fixed;
+        }
+
+                /*.header a {
+        float: center;
+        width:30px;
+        color: #fff;
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px; 
+        line-height: 25px;
+        border-radius: 4px;
+        background-color:rgb(196, 0, 0);
+        border-color: rgb(196, 0, 0);
+        }*/
+
+        .header a.logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+                /*.header a:hover {
+        background-color:  #010847;
+        color: #fff;
+        }*/
+
+                /*.header a.active {
+        background-color: dodgerblue;
+        color: white;
+        }*/
+
+        .header-center {
+            float: left;
+        }
+
+        @media screen and (max-width: 500px) {
+            .header a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+
+            .header-right {
+                float: none;
+            }
+        }
+    </style>
+
+    <script src="../plugins/sweetalerts/promise-polyfill.js"></script>
+    <link href="../plugins/sweetalerts/sweetalert.css" rel="stylesheet" type="text/css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700" rel="stylesheet" />
+    <style>
+        /*------ Google Font Style ------ */
+        body {font-family:'Roboto'!important;}
+    </style>
+
+</head>
+<body class="sidebar-main-active right-column-fixed"  style="background-color:#000;">
+    <!-- loader Start -->
+    <div id="loading">
+        <div id="loading-center">
+        </div>
+    </div>
+    <!-- loader END -->
+    <!-- Wrapper Start -->
+    <div class="wrapper">
+        <div class="iq-top-navbar header" style="margin-top:40px; background-color:transparent; width:1000px; height:400px;">
+    <div class="iq-navbar-custom" style="width:1500px;">
+        <nav class="navbar navbar-expand-lg navbar-light p-0" style="width:1000px;">
+            <div class="" style="margin-top:-80px; margin-right:-200px; background-color:transparent; color:#dbdbdb; width:1500px;">
+                <div>
+                    <a href="/navbarPage" style="margin-left:0px;"><img src="../img/menu.png" alt="menu" width="50px" style="margin-top:15px;"></a> <img src="../img/in-logo-1.png" alt="logo" style="padding-bottom:0px; width:200px; margin-top:-65px; margin-left:80px;"> <!--<a href="#"><img src="../img/speech-bubble (1).png" alt="chat" width="10px" style="margin-left:200px;"></a> <a href="#"><img src="../img/notification (2).png" alt="notification" width="10px" style="margin-left:50px;"></a>-->
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>        <!-- Page Content  -->
+        <div id="content-page" class="content-page" style="margin-top:90px;">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="iq-card">
+                            <div class="iq-card-body p-0">
+                                <div class="iq-edit-list">
+                                    <ul class="iq-edit-profile d-flex nav nav-pills" style="color:#dbdbdb; background-color:#131313;">
+                                        <li class="col-md-3 p-0">
+                                            <a class="nav-link active" data-toggle="pill" href="#personal-information">
+                                                Personal Information
+                                            </a>
+                                        </li>
+                                        <li class="col-md-3 p-0">
+                                            <a class="nav-link" data-toggle="pill" href="#chang-pwd"  style="color:#dbdbdb;">
+                                                Change Password
+                                            </a>
+                                        </li>
+                                        <li class="col-md-3 p-0">
+                                            <a class="nav-link" data-toggle="pill" href="#emailandsms" style="color:#dbdbdb;">
+                                                Email and SMS
+                                            </a>
+                                        </li>
+                                        <li class="col-md-3 p-0">
+                                            <a class="nav-link" data-toggle="pill" href="#manage-contact" style="color:#dbdbdb;">
+                                                Manage Contact
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="iq-edit-list-data">
+                            <div class="tab-content">
+                                <div class="tab-pane fade active show" id="personal-information" role="tabpanel">
+                                    <div class="iq-card" style="background-color:#131313;">
+                                        <div class="iq-card-header d-flex justify-content-between">
+                                            <div class="iq-header-title">
+                                                <h4 class="card-title"  style="color:#fff;">Personal Information</h4>
+                                            </div>
+                                        </div>
+                                        <div class="iq-card-body">
+                                            <form method="post" action="" enctype="multipart/form-data">
+                                                <div class="form-group row align-items-center">
+                                                    <div class="col-md-12">
+                                                        <div class="profile-img-edit">
+                                                            <img class="profile-pic" src="images/user/11.png" alt="profile-pic">                                                            <div class="p-image">
+                                                                <i class="ri-pencil-line upload-button"></i>
+                                                                <input class="file-upload" type="file" name="changepicture" accept="image/*" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class=" row align-items-center">
+                                                    <div class="form-group col-sm-6">
+                                                        <label for="fname" style="color:#dbdbdb;">Full Name:</label>
+                                                        <input style="background-color:#131313; color:#dbdbdb;" type="text" class="form-control" name="fullname" value="<%=user.fullname%>">
+                                                    </div>
+                                                    <!-- <div class="form-group col-sm-6">
+                                                        <label for="uname" style="color:#dbdbdb;">Username:</label>
+                                                        <input style="background-color:#131313; color:#dbdbdb;" type="text" class="form-control" name="username" value="Web1231">
+                                                    </div> -->
+                                                    <!-- <div class="form-group col-sm-6">
+                                                        <label for="cname" style="color:#dbdbdb;">City:</label>
+                                                        <input style="background-color:#131313; color:#dbdbdb;" type="text" class="form-control" name="city" value="Sarasota">
+                                                    </div> -->
+                                                    <div class="form-group col-sm-6">
+                                                        <label class="d-block" style="color:#dbdbdb;">Gender:</label>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="customRadio6" name="gender" class="custom-control-input"  value="Male">
+                                                            <label class="custom-control-label" for="customRadio6">Male</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="customRadio7" name="gender" class="custom-control-input"  value="Female">
+                                                            <label style="color:#dbdbdb;" class="custom-control-label" for="customRadio7">Female</label>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <div class="form-group col-sm-6">
+                                                        <label for="dob" style="color:#dbdbdb;">Date Of Birth:</label>
+                                                        <input style="background-color:#131313; color:#dbdbdb;" class="form-control" name="dob" value="1984-01-24">
+                                                    </div> -->
+                                                    <!-- <div class="form-group col-sm-6">
+                                                        <label style="color:#dbdbdb;">Marital Status:</label>
+                                                        <select  style="background-color:#131313; color:#dbdbdb;" class="form-control" name="marital_status">
+                                                            <option value="Single" >Single</option>
+                                                            <option value="Married" >Married</option>
+                                                            <option value="Widowed" >Widowed</option>
+                                                            <option value="Divorced" >Divorced</option>
+                                                            <option value="Separated" >Separated</option>
+                                                        </select>
+                                                    </div> -->
+                                                    <!-- <div class="form-group col-sm-6">
+                                                        <label style="color:#dbdbdb;">Age:</label>
+                                                        <select style="background-color:#131313; color:#dbdbdb;" class="form-control" name="age">
+                                                            <option value="12 - 18" >12 - 18</option>
+                                                            <option value="19 - 32" >19 - 32</option>
+                                                            <option value="33 - 45" >33 - 45</option>
+                                                            <option value="46 - 62" >46 - 62</option>
+                                                            <option value="63 >" >63 > </option>
+                                                        </select>
+                                                    </div> -->
+                                                    <div class="form-group col-sm-6">
+                                                        <label style="color:#dbdbdb;">Country:  &nbsp; &nbsp;  <%=user.country%></label>
+                                                        <select  style="background-color:#131313; color:#dbdbdb;" class="form-control" name="country" >
+                                                            <option value="Canada" >Canada</option>
+                                                            <option value="Noida" >Noida</option>
+                                                            <option value="USA" >USA</option>
+                                                            <option value="India">India</option>
+                                                            <option value="Africa" >Africa</option>
+                                                        </select>
+                                                    </div>
+                                                    <!-- <div class="form-group col-sm-6">
+                                                        <label style="color:#dbdbdb;">State:</label>
+                                                        <select style="background-color:#131313; color:#dbdbdb;" class="form-control" name="state">
+                                                            <option value="California" >California</option>
+                                                            <option value="Florida" >Florida</option>
+                                                            <option value="Georgia" >Georgia</option>
+                                                            <option value="Connecticut" >Connecticut</option>
+                                                            <option value="Louisiana" >Louisiana</option>
+                                                        </select>
+                                                    </div> -->
+                                                    <div class="form-group col-sm-12">
+                                                        <label style="color:#dbdbdb;">Address:</label>
+                                                        <textarea  style="background-color:#131313; color:#dbdbdb;" class="form-control" name="home_address" rows="5" style="line-height: 22px;"><%=user.address%></textarea>
+                                                    </div>
+                                                </div>
+                                                <button type="submit" name="updatePI" class="btn btn-primary mr-2">Submit</button>
+                                                <button type="reset" class="btn iq-bg-danger">Cancel</button>
+                                            </form>
+                                                                                    </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="chang-pwd" role="tabpanel">
+                                    <div class="iq-card">
+
+                                        <div class="iq-card-header d-flex justify-content-between">
+                                            <div class="iq-header-title">
+                                                <h4 class="card-title">Change Password</h4>
+                                            </div>
+                                        </div>
+                                        <div class="iq-card-body">
+                                            <form method="post" action="">
+                                                <div class="form-group">
+                                                    <label for="cpass">Current Password:</label>
+                                                    <a href="javascripe:void();" class="float-right">Forgot Password</a>
+                                                    <input type="Password" class="form-control" name="current_password" value="<%=user.password%>">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="npass">New Password:</label>
+                                                    <input type="Password" class="form-control" name="new_password" value="">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="vpass">Verify Password:</label>
+                                                    <input type="Password" class="form-control" name="verify_password" value="">
+                                                </div>
+                                                <button type="submit" name="changepassword" class="btn btn-primary mr-2">Submit</button>
+                                                <button type="reset" class="btn iq-bg-danger">Cancel</button>
+                                            </form>
+                                                                                    </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="emailandsms" role="tabpanel">
+                                    <div class="iq-card">
+                                        <div class="iq-card-header d-flex justify-content-between">
+                                            <div class="iq-header-title">
+                                                <h4 class="card-title">Email and SMS</h4>
+                                            </div>
+                                        </div>
+                                        <div class="iq-card-body">
+                                            <form>
+                                                <div class="form-group row align-items-center">
+                                                    <label class="col-md-3" for="emailnotification">Email Notification:</label>
+                                                    <div class="col-md-9 custom-control custom-switch">
+                                                        <input type="checkbox" class="custom-control-input" id="emailnotification" checked="">
+                                                        <label class="custom-control-label" for="emailnotification"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row align-items-center">
+                                                    <label class="col-md-3" for="smsnotification">SMS Notification:</label>
+                                                    <div class="col-md-9 custom-control custom-switch">
+                                                        <input type="checkbox" class="custom-control-input" id="smsnotification" checked="">
+                                                        <label class="custom-control-label" for="smsnotification"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row align-items-center">
+                                                    <label class="col-md-3" for="npass">When To Email</label>
+                                                    <div class="col-md-9">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="email01">
+                                                            <label class="custom-control-label" for="email01">You have new notifications.</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="email02">
+                                                            <label class="custom-control-label" for="email02">You're sent a direct message</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="email03" checked="">
+                                                            <label class="custom-control-label" for="email03">Someone adds you as a connection</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row align-items-center">
+                                                    <label class="col-md-3" for="npass">When To Escalate Emails</label>
+                                                    <div class="col-md-9">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="email04">
+                                                            <label class="custom-control-label" for="email04"> Upon new order.</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="email05">
+                                                            <label class="custom-control-label" for="email05"> New membership approval</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="email06" checked="">
+                                                            <label class="custom-control-label" for="email06"> Member registration</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                                                <button type="reset" class="btn iq-bg-danger">Cancel</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="manage-contact" role="tabpanel">
+                                    <div class="iq-card">
+                                        <div class="iq-card-header d-flex justify-content-between">
+                                            <div class="iq-header-title">
+                                                <h4 class="card-title">Manage Contact</h4>
+                                            </div>
+                                        </div>
+                                        <div class="iq-card-body">
+                                            <form method="post" action="">
+                                                <div class="form-group">
+                                                    <label for="cno">Contact Number:</label>
+                                                    <input type="tel" class="form-control" name="tel" value="<%=user.tel%>">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="email">Email:</label>
+                                                    <input type="text" class="form-control" name="email" value="<%=user.email%>">
+                                                </div>
+                                                <!-- <div class="form-group">
+                                                    <label for="url">Url:</label>
+                                                    <input type="text" class="form-control" id="url" value="https://getbootstrap.com">
+                                                </div> -->
+                                                <button type="submit" name="updatedcontact" class="btn btn-primary mr-2">Submit</button>
+                                                <button type="reset" class="btn iq-bg-danger">Cancel</button>
+                                            </form>
+                                                                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Wrapper END -->
+    <footer class="iq-footer" style="background-color:#000; color:#dbdbdb;">
+    <div class="container-fluid">
+       <div class="row">
+          <div class="col-lg-6">
+             <ul class="list-inline mb-0">
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                <li class="list-inline-item"><a href="#">Terms of Use</a></li>
+             </ul>
+          </div>
+          <div class="col-lg-6 text-right">
+             Copyright 2023 <a href="#">Trade-Tips LTD</a> All Rights Reserved.
+          </div>
+       </div>
+    </div>
+ </footer>
+    <!-- Optional JavaScript -->
+    <script src="../plugins/jquery-3.1.1.min.js"></script>
+    <script src="../plugins/sweetalerts/sweetalert2.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!--<script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>-->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Appear JavaScript -->
+    <script src="js/jquery.appear.js"></script>
+    <!-- Countdown JavaScript -->
+    <script src="js/countdown.min.js"></script>
+    <!-- Counterup JavaScript -->
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <!-- Wow JavaScript -->
+    <script src="js/wow.min.js"></script>
+    <!-- Apexcharts JavaScript -->
+    <script src="js/apexcharts.js"></script>
+    <!-- Slick JavaScript -->
+    <script src="js/slick.min.js"></script>
+    <!-- Select2 JavaScript -->
+    <script src="js/select2.min.js"></script>
+    <!-- Owl Carousel JavaScript -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- Magnific Popup JavaScript -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- Smooth Scrollbar JavaScript -->
+    <script src="js/smooth-scrollbar.js"></script>
+    <!-- lottie JavaScript -->
+    <script src="js/lottie.js"></script>
+    <!-- am core JavaScript -->
+    <script src="js/core.js"></script>
+    <!-- am charts JavaScript -->
+    <script src="js/charts.js"></script>
+    <!-- am animated JavaScript -->
+    <script src="js/animated.js"></script>
+    <!-- am kelly JavaScript -->
+    <script src="js/kelly.js"></script>
+    <!-- am maps JavaScript -->
+    <script src="js/maps.js"></script>
+    <!-- am worldLow JavaScript -->
+    <script src="js/worldLow.js"></script>
+    <!-- Style Customizer -->
+    <script src="js/style-customizer.js"></script>
+    <!-- Chart Custom JavaScript -->
+    <script src="js/chart-custom.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/custom.js"></script>
+
+    <!-- <script>
+        function noticePop( value, type ){
+            swal({
+                html: '<span style="font-size:18px!important;">'+ `${value}` +'</span>',
+                type: `${type}`,
+                timer: 4000,
+                showConfirmButton: false,
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+            }).then(function(){
+                window.location.href = 'edit';
+            });
+        }
+    </script>
+    <script>
+        // BASE URL and API Inclusion
+        const BASE_URL = 'https://tradetips-analysis.live/';
+        const API = `${BASE_URL}api/users.php`;
+        const USERID = 40;
+    </script>
+    <script src="user_notifications.js"></script>
+
+</body>
+</html> -->
+
+<%- include('partials/dashboardFooter')%>

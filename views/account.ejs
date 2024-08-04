@@ -1,0 +1,261 @@
+
+<%- include('partials/dashboardHeader')%>
+
+ 
+<!-- <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="investment, Forex, Trading, Bitcoin, Cryptocurrency, Global investment, Live Trade, Trading class, indics">
+    <meta name="author" content="Paul HubWeb & Tech">
+    <meta name="theme-color" content="#313131" />
+ 
+    <title>Profile </title> -->
+
+    <link rel="shortcut icon" href="../img/Signals-Alert-3.png" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" href="../img/Signals-Alert-3.png">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/typography.css">
+   
+    <link rel="stylesheet" href="css/style.css">
+  
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header {
+            overflow: none;
+            background-color: none;
+            padding: 20px 10px;
+            padding-left: 5px;
+            position: fixed;
+        }
+
+                /*.header a {
+        float: center;
+        width:30px;
+        color: #fff;
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px; 
+        line-height: 25px;
+        border-radius: 4px;
+        background-color:rgb(196, 0, 0);
+        border-color: rgb(196, 0, 0);
+        }*/
+
+        .header a.logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+                /*.header a:hover {
+        background-color:  #010847;
+        color: #fff;
+        }*/
+
+                /*.header a.active {
+        background-color: dodgerblue;
+        color: white;
+        }*/
+
+        .header-center {
+            float: left;
+        }
+
+        @media screen and (max-width: 500px) {
+            .header a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+
+            .header-right {
+                float: none;
+            }
+        }
+    </style>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700" rel="stylesheet" />
+    <style>
+        /*------ Google Font Style ------ */
+        body {font-family:'Roboto'!important;}
+    </style>
+
+</head>
+<body class="sidebar-main-active right-column-fixed" style="background-color:#000; color:#dbdbdb;">
+    <!-- loader Start -->
+    <!-- <div id="loading">
+        <div id="loading-center">
+        </div>
+    </div> -->
+    <!-- loader END -->
+    <!-- Wrapper Start -->
+    <div class="wrapper">
+        <div class="iq-top-navbar header" style="margin-top:40px; background-color:transparent; width:1000px; height:400px;">
+    <div class="iq-navbar-custom" style="width:1500px;">
+        <nav class="navbar navbar-expand-lg navbar-light p-0" style="width:1000px;">
+            <div class="" style="margin-top:-80px; margin-right:-200px; background-color:transparent; color:#dbdbdb; width:1500px;">
+                <div>
+                    <a href="/navbarPage" style="margin-left:0px;"><img src="../img/menu.png" alt="menu" width="50px" style="margin-top:15px;"></a> 
+                    <!-- <img src="../img/in-logo-1.png" alt="logo" style="padding-bottom:0px; width:200px; margin-top:-65px; margin-left:80px;"> <a href="#"><img src="../img/speech-bubble (1).png" alt="chat" width="10px" style="margin-left:200px;"></a> <a href="#"><img src="../img/notification (2).png" alt="notification" width="10px" style="margin-left:50px;"></a> -->
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>        <!-- Page Content  -->
+        <div id="content-page" class="content-page" style="margin-top:50px;">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="iq-card">
+                            <div class="iq-card-body profile-page p-0">
+                                <div class="profile-header">
+                                    <div class="cover-container">
+                                        <!--images/page-img/profile-bg.jpg-->
+                                        <img src="images/page-img/profile-bg.jpg" alt="profile-bg" class="rounded img-fluid w-100">
+                                        <ul class="header-nav d-flex flex-wrap justify-end p-0 m-0">
+                                            <li><span class="d-inline-block" data-trigger="hover" data-toggle="popover" data-content="Edit Profile Details"><a href="/editProfile"><i class="bi bi-pencil"></i></a></span></li>
+                                            <li><span class="d-inline-block" data-trigger="hover" data-toggle="popover" data-content="Change Password"><a href="/editprofile"><i class="bi bi-gear"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="profile-info iq-card-body"  style="background-color:#131313; color:#dbdbdb;">
+                                        <div class="row align-items-center">
+                                            <div class="col-sm-12 col-md-6">
+                                                <div class="user-detail">
+                                                    <div class="d-flex flex-wrap align-items-center">
+                                                        <div class="profile-img">
+                                                            <img src="assetss/img/pers.svg" alt="profile-img" class="avatar-130 img-fluid" />                                                        </div>
+                                                        <div class="profile-detail d-flex align-items-center ml-3">
+                                                            <h3 style="color:#dbdbdb;" class="line-height"><%=user.fullname%></h3><!--
+                                                            <p class="m-0 pl-3"> - Web designer</p>-->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 profile-center">
+                        <div class="tab-content">
+                            <div class="tab-pane fade active show" id="profile-feed" role="tabpanel">
+                                <div class="iq-card" style="background-color:#131313; color:#dbdbdb;">
+                                    <div class="iq-card-body p-0">
+                                        <div class="user-post-data p-3">
+                                            <div class="d-flex flex-wrap">
+                                                <div class="media-support-user-img mr-3">
+                                                    <img class="profile-pic" src="assetss/img/pers.svg" alt="profile-pic" style="width:120px; height:180px; padding-bottom:50px"></a> <a href="/account" style="color:#000; padding-left:40px;"><b style="font-size:20px; color:#000;"><%=user.fullname%>                                               </div>
+                                                <div class="iq-header-title">
+                                                    <h4 class="card-title" style="color:#dbdbdb;">Profile</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="comment-area p-3">
+                                            <div class="iq-card-header d-flex justify-content-between">
+                                                <div class="iq-header-title">
+                                                    <h4 class="card-title" style="color:#dbdbdb;">About User</h4>
+                                                </div>
+                                            </div>
+                                            <div class="iq-card-body">
+                                                <div class="mt-2">
+                                                    <h6 style="color:#dbdbdb;">Name:</h6>
+                                                    <p style="color:#dbdbdb;"><%=user.fullname%></p>
+                                                </div>
+                                                <div class="mt-2">
+                                                    <h6 style="color:#dbdbdb;">Gender:</h6>
+                                                    <p style="color:#dbdbdb;"><%=user.gender%></p>
+                                                </div>
+                                    
+                                                <div class="mt-2">
+                                                    <h6 style="color:#dbdbdb;">Contact:</h6>
+                                                    <p style="color:#dbdbdb;"><a href="callto:"><%=user.tel%></a></p>
+                                                </div>
+                                                <div class="mt-2">
+                                                    <h6 style="color:#dbdbdb;">Email:</h6>
+                                                    <p style="color:#dbdbdb;"><a href="mailto:"><%=user.email%></a></p>
+                                                </div>
+                                                <div class="mt-2">
+                                                    <h6 style="color:#dbdbdb;">Address:</h6>
+                                                    <p style="color:#dbdbdb;"><%=user.address%></p>
+                                                </div>
+                                                <div class="mt-2">
+                                                    <h6 style="color:#dbdbdb;">Country:</h6>
+                                                    <p style="color:#dbdbdb;"><%=user.country%></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- Wrapper END -->
+   
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Appear JavaScript -->
+    <script src="js/jquery.appear.js"></script>
+    <!-- Countdown JavaScript -->
+    <script src="js/countdown.min.js"></script>
+    <!-- Counterup JavaScript -->
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <!-- Wow JavaScript -->
+    <script src="js/wow.min.js"></script>
+    <!-- Apexcharts JavaScript -->
+    <script src="js/apexcharts.js"></script>
+    <!-- Slick JavaScript -->
+    <script src="js/slick.min.js"></script>
+    <!-- Select2 JavaScript -->
+    <script src="js/select2.min.js"></script>
+    <!-- Owl Carousel JavaScript -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- Magnific Popup JavaScript -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- Smooth Scrollbar JavaScript -->
+    <script src="js/smooth-scrollbar.js"></script>
+    <!-- lottie JavaScript -->
+    <script src="js/lottie.js"></script>
+    <!-- am core JavaScript -->
+    <script src="js/core.js"></script>
+    <!-- am charts JavaScript -->
+    <script src="js/charts.js"></script>
+    <!-- am animated JavaScript -->
+    <script src="js/animated.js"></script>
+    <!-- am kelly JavaScript -->
+    <script src="js/kelly.js"></script>
+    <!-- am maps JavaScript -->
+    <script src="js/maps.js"></script>
+    <!-- am worldLow JavaScript -->
+    <script src="js/worldLow.js"></script>
+    <!-- Style Customizer -->
+    <script src="js/style-customizer.js"></script>
+    <!-- Chart Custom JavaScript -->
+    <script src="js/chart-custom.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/custom.js"></script>
+
+
+<%- include('partials/dashboardFooter')%>

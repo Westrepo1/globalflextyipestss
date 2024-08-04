@@ -1,0 +1,314 @@
+<%- include('partials/dashboardHeader')%>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- css -->
+    <link rel="stylesheet" href="assets/depositMethod.css" />
+    <title>withdrawal</title>
+    <script src="../plugins/sweetalerts/promise-polyfill.js"></script>
+    <link href="../plugins/sweetalerts/sweetalert.css" rel="stylesheet" type="text/css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700" rel="stylesheet" />
+    <style>
+        /*------ Google Font Style ------ */
+        body {font-family:'Roboto'!important;}
+    </style>
+
+    <script>
+        function noticePop( value, type ){
+            swal({
+                html: '<span style="font-size:18px!important;">'+ `${value}` +'</span>',
+                type: `${type}`,
+                timer: 4000,
+                showConfirmButton: false,
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+            }).then(function(){
+                window.location.href = 'dashboard';
+            });
+        }
+
+        function noticeUpgrade( value ){
+            swal({
+                html: '<span style="font-size:18px!important;">'+ `${value}` +'</span>',
+                type: "error",
+                confirmButtonColor: "red",
+                confirmButtonText: 'Okay.',
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                padding: '2em'
+            })/*.then(function(){
+                window.location.href = 'withdraw';
+            })*/;
+        }
+    </script>
+  </head>
+  <body>
+
+    <!-- ============= Navbar ========== -->
+    <section class="navbar-top">
+      <div class="container">
+        <div class="navbar-left">
+         <a href="/navbarPage"  > <img src="assets/vector/hamburger.svg" alt="hamburger" class="hamburger" id="btn" /></a>
+          <!--<img src="assets/vector/Notification.svg" alt="Notification" class="notification" />
+          <a href="profile"> <img src="assets/image/avatar.png" alt="avatar" class="avatar" /></a>-->
+        </div>
+        <div class="navbar-right"></div>
+      </div>
+    </section>
+    <!-- ======= End Navbar ======== -->
+
+    <section class="jumbotron" style="background-color: black;">
+            <div class="container">
+                    <div class="withdrawalContent">
+                        <p class="writer">Withdrawal</p>
+                        <hr />
+                        <h1 class="title fw-semibold mt-3 mb-4">withdrawal Method</h1>
+                        <p class="title fw-sm mt-3 mb-4" id="available">Eligible to widthdraw <%=user.balance%> </p>
+
+                        <form action="/widthdraw/<%=user._id%>" method="post" autocomplete="off" id="withdrawal-form" class="was-validated">
+                        <div class="dropdown mb-3 mt-2">
+               <select name="type" id="type" class="btn btn-secondary paymentMethod mt-3 mb-2" required>
+                      <option value="" style="font-size:30px;"><b>---Select Method---</b></option>
+                      <option class="dropdown-menu dropdown-item" value="Bitcoin">Bitcoin</option>
+                      <option class="dropdown-menu dropdown-item" value="Ethereum">Ethereum</option>
+                      <option class="dropdown-menu dropdown-item" value="Litecoin">Litecoin</option>
+                      <option class="dropdown-menu dropdown-item" value="BitcoinCash">BitcoinCash</option>
+                      <option class="dropdown-menu dropdown-item" value="Skrill">Skrill</option>
+                      <!--<option value="Paypal">Paypal</option>-->
+                      <option class="dropdown-menu dropdown-item" value="Bank Transfer">Bank Transfer</option>
+                  </select>
+                        </div>
+                        <div class="dropdown mb-3 mt-2" id="field1" style="display: None;">
+                          <label for="input" class="label">Bitcoin Wallet:</label>
+                        <input type="text" name="bitcoin_address" class="input" placeholder="BTC wallet Address" />
+                        </div>
+                        <div class="dropdown mb-3 mt-2" id="field2" style="display: None;">
+                          <label for="input" class="label">Ethereum Wallet:</label>
+                        <input type="text" name="ethereum_address" class="input" placeholder="Ethereum wallet Address" />
+                        </div>
+                        <div class="dropdown mb-3 mt-2" id="field3" style="display: None;">
+                        <label for="input" class="label">Litecoin Wallet:</label>
+                        <input type="text" name="litecoin_address" class="input" placeholder="Litecoin wallet Address" />
+                        </div>
+                        <div class="dropdown mb-3 mt-2" id="field4" style="display: None;">
+                        <label for="input" class="label">Bitcoincash Wallet:</label>
+                        <input type="text" name="bitcoincash_address" class="input" placeholder="Bitcoincash wallet Address" />
+                        </div>
+                        <div class="dropdown mb-3 mt-2" id="field5" style="display: None;">
+                        <label for="input" class="label">Skrill:</label>
+                        <input type="text" name="skrill_email" class="input" placeholder="Skrill" />
+                        </div>
+                        <div class="dropdown mb-3 mt-2" id="field7" style="display: None;">
+                        <label for="input" class="label">Bank Name:</label>
+                        <input type="text" name="bank_name" class="input" placeholder="Bank Name" />
+                        </div>
+                        <div class="dropdown mb-3 mt-2" id="field8" style="display: None;">
+                          <label for="input" class="label">Account Number:</label>
+                        <input type="text" name="account_number" class="input" placeholder="Account Number" />
+                        </div>
+                        <div class="dropdown mb-3 mt-2" id="field9" style="display: None;">
+                        <label for="input" class="label">Country:</label>
+                        <input type="text" name="country" placeholder="Country" class="input"  />
+                        </div>
+                        <div class="dropdown mb-3 mt-2" id="field10" style="display: None;">
+                        <label for="input" class="label">Swift Code:</label>
+                        <input type="text"name="swift_code" placeholder="Swift Code" class="input" />
+                        </div>
+                        <label for="input" class="label">Amount:$</label>
+                        <br />
+                        <input type="text" name="amount" id="amount" placeholder="Amount without ($)" class="input"  />
+                        <label for="input" class="label">Fee:</label>
+                        <br />
+                        <input  type="text" class="input feeInput" name="fees" id="fees" value="0%" readonly/>
+                        <label for="input" class="label">Description</label>
+                        <br />
+                        <textarea cols="30" rows="3" maxlength="20" class="textarea" name="narration" id="narration" placeholder="Narration" style="color: white;"></textarea>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                          <label class="form-check-label" for="flexCheckDefault"> Agree to Terms & Conditions? </label>
+                        </div>
+                        <button name="withdraw" type="submit" class="btn-main">Next</button>
+                        </form>
+                        
+                                </div>
+              </div>
+    
+    </section>
+
+    <script src="../plugins/jquery-3.1.1.min.js"></script>
+    <script src="../plugins/sweetalerts/sweetalert2.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#type").change(function() {
+                if ($(this).val() == "Bitcoin") {
+                    $("#field1").fadeIn();
+                    $("#field2").hide();
+                    $("#field3").hide();
+                    $("#field4").hide();
+                    $("#field5").hide();
+                    $("#field6").hide();
+                    $("#field7").hide();
+                    $("#field8").hide();
+                    $("#field9").hide();
+                    $("#field10").hide();
+                    $("#field11").hide();
+                    $('#wallet-number').attr("placeholder", "Bitcoin");
+                    $('#amount-fees').val('2%')
+
+                } else if ($(this).val() == "Ethereum") {
+                    $("#field2").fadeIn();
+                    $("#field1").hide();
+                    $("#field3").hide();
+                    $("#field4").hide();
+                    $("#field5").hide();
+                    $("#field6").hide();
+                    $("#field7").hide();
+                    $("#field8").hide();
+                    $("#field9").hide();
+                    $("#field10").hide();
+                    $("#field11").hide();
+                    $('#wallet-number').attr("placeholder", "Ethereum");
+                    $('#amount-fees').val('4%')
+                } else if ($(this).val() == "Litecoin") {
+                    $("#field3").fadeIn();
+                    $("#field1").hide();
+                    $("#field2").hide();
+                    $("#field4").hide();
+                    $("#field5").hide();
+                    $("#field6").hide();
+                    $("#field7").hide();
+                    $("#field8").hide();
+                    $("#field9").hide();
+                    $("#field10").hide();
+                    $("#field11").hide();
+                    $('#wallet-number').attr("placeholder", "Litecoin");
+                    $('#amount-fees').val('4%')
+                } else if ($(this).val() == "BitcoinCash") {
+                    $("#field4").fadeIn();
+                    $("#field1").hide();
+                    $("#field2").hide();
+                    $("#field3").hide();
+                    $("#field5").hide();
+                    $("#field6").hide();
+                    $("#field7").hide();
+                    $("#field8").hide();
+                    $("#field9").hide();
+                    $("#field10").hide();
+                    $("#field11").hide();
+                    $('#wallet-number').attr("placeholder", "BitcoinCash");
+                    $('#amount-fees').val('4%')
+                } else if ($(this).val() == "Skrill") {
+                    $("#field5").fadeIn();
+                    $("#field1").hide();
+                    $("#field2").hide();
+                    $("#field3").hide();
+                    $("#field4").hide();
+                    $("#field6").hide();
+                    $("#field7").hide();
+                    $("#field8").hide();
+                    $("#field9").hide();
+                    $("#field10").hide();
+                    $("#field11").hide();
+                    $('#wallet-number').attr("placeholder", "Skrill");
+                    $('#amount-fees').val('3%')
+                } else if ($(this).val() == "Paypal") {
+                    $("#field6").fadeIn();
+                    $("#field1").hide();
+                    $("#field2").hide();
+                    $("#field3").hide();
+                    $("#field4").hide();
+                    $("#field5").hide();
+                    $("#field7").hide();
+                    $("#field8").hide();
+                    $("#field9").hide();
+                    $("#field10").hide();
+                    $("#field11").hide();
+                    $('#wallet-number').attr("placeholder", "Paypal");
+                    $('#amount-fees').val('2%')
+                } else if ($(this).val() == "Bank Transfer") {
+                    $("#field7").fadeIn();
+                    $("#field8").fadeIn();
+                    $("#field9").fadeIn();
+                    $("#field10").fadeIn();
+                    $("#field11").fadeIn();
+                    $("#field1").hide();
+                    $("#field2").hide();
+                    $("#field3").hide();
+                    $("#field4").hide();
+                    $("#field5").hide();
+                    $("#field6").hide();
+                    $('#wallet-number').attr("placeholder", "Bank Transfer");
+                    $('#amount-fees').val('5%')
+                } else {
+                    $("#field1").hide();
+                    $("#field2").hide();
+                    $("#field3").hide();
+                    $("#field4").hide();
+                    $("#field5").hide();
+                    $("#field6").hide();
+                    $("#field7").hide();
+                    $("#field8").hide();
+                    $("#field9").hide();
+                    $("#field10").hide();
+                    $("#field11").hide();
+                }
+            });
+
+            $("#amount-gram").keyup(function() {
+                //var usd = this.val();
+                var usd = $("#amount-gram").val();
+                //var course = '2.0682345991368067';
+                var course = '0.00011';
+                $("#amount-usd").val(usd * course);
+            });
+
+
+            /*$('#withdrawal-form').on('submit', function(event) {
+
+                var totalGgram = $('#total-gram').data('balance'),
+                    amountGram = $("#amount-usd").val();
+                console.log(totalGgram + '===' + amountGram);
+
+                if (totalGgram <= amountGram) {
+                    event.preventDefault();
+                    //$('#notEnough .card-body h2').text('Not enough Gram')
+                    //$('#notEnough').modal('toggle');
+                    Swal.fire({
+                        title: "Error!",
+                        text: "Not enough Gram",
+                        type: "error",
+                        confirmButtonClass: 'btn btn-primary',
+                        buttonsStyling: false,
+                    });
+
+                } else {*/
+                    //$('#notEnough .card-body h2').text('Not available')
+                    ///$('#notEnough').modal('toggle')
+                    /* Swal.fire({
+                        title: "Error!",
+                        text: "Not available",
+                        type: "error",
+                        confirmButtonClass: 'btn btn-primary',
+                        buttonsStyling: false,
+                        });  */
+                //}
+            //});
+        });
+    </script>
+
+    <!-- <script>
+        // BASE URL and API Inclusion
+        const BASE_URL = 'https://tradetips-analysis.live/';
+        const API = `${BASE_URL}api/users.php`;
+        const USERID = 40;
+    </script> -->
+  <!-- </body>
+</html> -->
+
+   
+
+<%- include('partials/dashboardFooter')%>

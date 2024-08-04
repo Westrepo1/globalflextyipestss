@@ -1,0 +1,279 @@
+<%- include('partials/dashboardHeader')%>
+
+<head>
+	<title>index</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<link rel="stylesheet" href="assetss/index.css"> 
+<link rel="stylesheet" href="assets0/notify.css">
+
+</head>
+<body>
+
+<section class="content">
+    
+    <div id="a-notification" class="notification  gone   d-flex justify-content-start ">
+		<div class="d-flex flex-column">
+
+			<div class="h-">
+				Notification
+			</div>
+			<div class="s-">
+							</div>
+			<div class="b-">			</div>
+			<div class="btns row">
+				<div class="col-6">
+					<div class="red-btn" id="close_n" >
+						<center>CLOSE NOTIFICATION</center>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="gren-btn" id="mark_red" data-id="<br />
+<b>Notice</b>:  Undefined index: i- in <b>/home/u776380383/domains/tradetips-analysis.live/public_html/wp-user/dashboard.php</b> on line <b>119</b><br />
+">
+						<center>MARK AS READ</center>
+					</div>
+				</div>
+			</div>
+ 
+		</div>
+	</div>
+
+<div class="d-flex justify-content-between from-top">
+	<div>
+		<a href="/navbarPage"><img src="assetss/img/ham.svg" /></a>
+	</div>
+	<div class="d-flex flex-column">
+	    <div id="google_translate_element"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<div class="d-flex justify-content-center align-items-center">
+				<div class="uname"><%=user.fullname%></div>
+			</div>
+			</div>
+	<div>
+		<a href="/account"><div class="ph">
+    <img src="assetss/img/pers.svg" /> </div></a>
+	</div>
+</div>
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/" rel="noopener" target="_blank"><span class="blue-text"></span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+  {
+  "symbols": [
+    {
+      "proName": "FOREXCOM:SPXUSD",
+      "title": "S&P 500"
+    },
+    {
+      "proName": "FOREXCOM:NSXUSD",
+      "title": "US 100"
+    },
+    {
+      "proName": "FX_IDC:EURUSD",
+      "title": "EUR/USD"
+    },
+    {
+      "proName": "BITSTAMP:BTCUSD",
+      "title": "Bitcoin"
+    },
+    {
+      "proName": "BITSTAMP:ETHUSD",
+      "title": "Ethereum"
+    }
+  ],
+  "showSymbolLogo": false,
+  "colorTheme": "dark",
+  "isTransparent": true,
+  "displayMode": "regular",
+  "locale": "en"
+}
+  </script>
+<!-- TradingView Widget END -->
+<div class="mycard from-topx30">
+	<div class="d-flex justify-content-between from-bottom" style="margin-top: 8%;">
+		<div>
+			<div class="mheader">Total Balance</div>
+			<div class="mfigures" style="margin-top: 5%;">
+				<h5><span style="font-size: larger;"></span><%=user.profit%></h5>			    <!--<br />
+<b>Notice</b>:  Undefined variable: earnings123 in <b>/home/u776380383/domains/tradetips-analysis.live/public_html/wp-user/dashboard.php</b> on line <b>206</b><br />
+₹0.00--></div>
+			
+			<div><span style="background: rgba(210, 50, 50, 0.15);
+border-radius: 10px;padding-bottom: 4%;" >
+			</span>
+    <div><span style="background: rgba(0, 247, 41, 0.15);
+border-radius: 10px;padding-bottom: 4%;" ><span </span>
+			</div>
+		</div>
+		</div>
+		<div>
+		    
+			<div  >
+			<div class="mheader" >Account Type</div>
+			<div class="basic"><%=user.account%></div>
+		</div>
+			<div class="score" style="margin-top: 19%;text-align: right;"><%=user.session%></div>
+			<div class="ts">Trade Sessions</div>
+		</div>
+	</div>
+	<div class="mheader">
+	    <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/AMEX-SPY/" rel="noopener" target="_blank"><span class="blue-text"></span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+  {
+  "symbol": "AMEX:SPY",
+  "width": "100%",
+  "height": "250",
+  "locale": "en",
+  "dateRange": "1D",
+  "colorTheme": "dark",
+  "trendLineColor": "rgba(41, 98, 255, 1)",
+  "underLineColor": "rgba(41, 98, 255, 0.3)",
+  "underLineBottomColor": "rgba(41, 98, 255, 0)",
+  "isTransparent": true,
+  "autosize": false,
+  "largeChartUrl": ""
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+ </div>
+</div>
+<div class="row" style="margin-top: 5%;">
+	<div class="col-6">
+		<div class="small-box">
+			<div class="small-box-title">
+				Active Deposit
+			</div>
+			<div class="small-box-val small-box-success">
+				<%=user.balance%>  		</div>
+		</div>
+	</div>
+	<div class="col-6">
+		<div class="small-box">
+			<div class="small-box-title">
+				Active Earnings
+			</div>
+			<div class="small-box-val small-box-success">
+				<%=user.profit%><!--<br />
+<b>Notice</b>:  Undefined variable: earnings123 in <b>/home/u776380383/domains/tradetips-analysis.live/public_html/wp-user/dashboard.php</b> on line <b>274</b><br />
+₹0.00--></div>
+		</div>
+	</div>
+</div>
+
+
+<div class="row" style="margin-top: 5%;">
+	<div class="col-6">
+		<div class="small-box">
+			<div class="small-box-title">
+				Last Deposit
+			</div>
+			<div class="small-box-val small-box-success">
+				<%=user.balance%>			</div>
+		</div>
+	</div>
+	<div class="col-6">
+		<div class="small-box">
+			<div class="small-box-title">
+				Total Withdrawal
+			</div>
+			<div class="small-box-val small-box-danger">
+				<%=user.totalWidthdraw%> 		</div>
+		</div>
+	</div>
+</div>
+
+<div class="row" style="margin-top: 5%;">
+	<div class="col-6">
+		<div class="small-box">
+			<div class="small-box-title">
+				Bonus
+			</div>
+			<div class="small-box-val small-box-success">
+				<%=user.bonus%>  		</div>
+		</div>
+	</div>
+	<div class="col-6">
+		<div class="small-box">
+			<div class="small-box-title">
+				Pending Withdrawal
+			</div>
+			<div class="small-box-val small-box-gold">
+				<%=user.widthdrawBalance%> 		</div>
+		</div>
+	</div>
+</div>
+<div class="row" style="margin-top: 5%;"></div>
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_8d49c"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"><span class="blue-text">AAPL stock chart</span></a> by TradingView</div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
+  new TradingView.widget(
+  {
+  "width": "100%",
+  "height": 410,
+  "symbol": "NASDAQ:AAPL",
+  "interval": "1",
+  "timezone": "Etc/UTC",
+  "theme": "dark",
+  "style": "1",
+  "locale": "en",
+  "toolbar_bg": "#f1f3f6",
+  "enable_publishing": false,
+  "allow_symbol_change": true,
+  "container_id": "tradingview_8d49c"
+}
+  );
+  </script>
+</div>
+<!-- TradingView Widget END -->
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/currencies/" rel="noopener" target="_blank"><span class="blue-text">Forex market</span></a> by TradingView</div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-forex-cross-rates.js" async>
+  {
+  "width": "100%",
+  "height": "500",
+  "currencies": [
+    "EUR",
+    "USD",
+    "JPY",
+    "GBP",
+    "CHF",
+    "AUD",
+    "CAD",
+    "NZD"
+  ],
+  "isTransparent": true,
+  "colorTheme": "dark",
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+<h1 style="margin-top: 1%;height: 7vh;">&nbsp;</h1> 
+
+</section>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="assets0/notify.js"></script>
+
+    
+<%- include('partials/dashboardFooter')%>

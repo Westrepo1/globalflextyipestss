@@ -1,0 +1,83 @@
+<%- include('partials/_header'); -%>
+
+
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark text-light bg-dark sticky-top" style="background: #444444 !important">
+    <div class="container">
+      <!-- Toggler/collapsibe Button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Brand -->
+      <a class="navbar-brand" href="index-2.html">
+      <img src="images/logo.png" class="d-none d-md-inline" title="Globalflextyips" style="height: 40px"/>
+      <img src="images/icon.png" class="d-md-none" title="Globalflextyips" style="height: 40px"/>
+      </a>
+  
+     
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="/" class="active">HOME</a></li>
+              <li class="nav-item"><a class="nav-link" href="/about">ABOUT US</a></li>
+              <li class="nav-item"><a class="nav-link" href="/terms" class="active">TERMS & CONDITIONS</a></li>
+              <li class="nav-item"><a class="nav-link" href="/faqs">FAQS</a></li>
+              <li class="nav-item"><a class="nav-link" href="/license">License</a></li>
+              <li class="nav-item"><a class="nav-link" href="/start_guide">START GUIDE</a></li>
+              <li class="nav-item"><a class="nav-link" href="/contact">CONTACT US</a></li>
+              <li class="nav-item"><a class="nav-link" href="/affiliate_program">AFFILIATE</a></li>
+          </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <style>
+  .bycwdgt, .btcwdgt .btcwdgt-header, .btcwdgt .btcwdgt-body, .btcwdgt .btcwdgt-footer {
+      display: inline-block!important;
+  }
+  
+  .btcwdgt-s-price .btcwdgt-body ul li {
+      font-size: 12px !important;
+      line-height: 1 !important;
+      font-weight: 700 !important;
+  }
+  </style><link rel="stylesheet" type="text/css" href="slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+  <style>
+  .slick-dots{bottom: -10px !important;}
+  .slick-dotted.slick-slider{ margin-bottom: 0px;}
+  </style>    <div class="bg-about">
+          <div class="container">
+              <h1 class="wow slideInLeft" data-wow-duration="1s">License</h1>
+          </div>
+      </div>
+      <div class="container my-5 wow slideInUp" data-wow-duration="1s">
+           <img src="images/licence.png" style="display:block; margin:auto"/>
+      </div>
+      <a href="/about#" id="back-to-top" class="back-to-top fa fa-arrow-up show-back-to-top"></a>
+      <script>
+          /*--window Scroll functions--*/
+          $(window).on('scroll', function() {
+              /*--show and hide scroll to top --*/
+              var ScrollTop = $('#back-to-top');
+              if ($(window).scrollTop() > 500) {
+                  ScrollTop.fadeIn(1000);
+              } else {
+                  ScrollTop.fadeOut(1000);
+              }
+          });
+      </script>
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+<%- include('partials/_footer'); -%>

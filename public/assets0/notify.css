@@ -1,0 +1,138 @@
+
+@font-face {
+    font-family: "Inter";
+    src: url("static/Inter-Regular.ttf"); 
+    }
+    @font-face {
+    font-family: "Montserrat";
+    src: url("static/Montserrat-SemiBold.ttf"); 
+    }
+    
+    
+    
+    body {
+     background: #000000;
+    }
+    
+    .h-{
+      margin-top: 5px;
+      font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 10px;
+    /* identical to box height */
+    
+    color: #FF0000;
+    
+    }
+    .s-{
+      margin-top: 12px;
+      font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 8px;
+    line-height: 10px;
+    /* identical to box height */
+    
+    
+    color: #000000;
+    }
+    .b-{
+      margin-top: 11px;
+      font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 11px;
+    
+    color: #000000;
+    }
+    .btns{
+      margin-top: 11px;
+    }
+    .red-btn{
+      padding-top: 18px;
+      padding-bottom: 18px;
+      background: #D32323;
+    border-radius: 7px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 10px;
+    /* identical to box height */
+    
+    cursor: pointer;
+    
+    color: #FFFFFF;
+    }
+    .gren-btn{
+      padding-top: 18px;
+      padding-bottom: 18px;
+      background: #0DA600;
+    border-radius: 7px;
+    
+      font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 10px;
+    /* identical to box height */
+    
+    cursor: pointer;
+    
+    color: #FFFFFF;
+    }
+    /*.content {
+      max-width: 100%;
+      height: 100vh;
+      overflow-y: scroll;
+      margin: auto;
+      color: white;
+      padding: 10px;
+    }*/
+    
+    .notification{
+     
+      
+      max-width: 100%;
+      width: 95%;
+      color: #000;
+    
+      position: fixed;
+      top: 5%;
+      z-index:10000;
+    
+    }
+    .notification .d-flex{
+    width: 100%;
+    max-width: 500px;
+      padding: 10px;
+    /*
+      
+      
+      margin: 3px 10px;*/
+    border-radius: 10px;
+    
+      background: #FFFFFF;
+      font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 100%;
+    /* identical to box height, or 10px */
+    
+    
+    color: #000000;
+    
+    }
+    .notification #msg{
+      width: 100%;
+      text-align: center;
+    }
+    .gone{
+        display: none !important;
+    }
+    

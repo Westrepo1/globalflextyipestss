@@ -1,0 +1,522 @@
+<%- include('partials/dashboardHeader')%>
+
+
+<!doctype html>
+<html lang="en-uk">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="investment, Forex, Trading, Bitcoin, Cryptocurrency, Global investment, Live Trade, Trading class, indics">
+    <meta name="author" content="">
+    <meta name="theme-color" content="#313131" />
+    <!-- Site Properties -->
+    <title>Stock Trading</title>
+    <link rel="shortcut icon" href="../img/cfc-markets-logo.png" type="image/x-icon" />
+    <link rel="apple-touch-icon-precomposed" href="../img/cfc-markets-logo.png" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+     <!-- css -->
+    <link rel="stylesheet" href="assets/depositMethod.css" />
+    <!-- Typography CSS -->
+    <link rel="stylesheet" href="css/typography.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header {
+            overflow: none;
+            background-color: none;
+            padding: 20px 10px;
+            padding-left: 5px;
+            position: fixed;
+        }
+
+                /*.header a {
+        float: center;
+        width:30px;
+        color: #fff;
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px; 
+        line-height: 25px;
+        border-radius: 4px;
+        background-color:rgb(196, 0, 0);
+        border-color: rgb(196, 0, 0);
+        }*/
+
+        .header a.logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+                /*.header a:hover {
+        background-color:  #010847;
+        color: #fff;
+        }*/
+
+                /*.header a.active {
+        background-color: dodgerblue;
+        color: white;
+        }*/
+
+        .header-center {
+            float: left;
+        }
+
+        @media screen and (max-width: 500px) {
+            .header a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+
+            .header-right {
+                float: none;
+            }
+        }
+    </style>
+
+    <script src="../plugins/sweetalerts/promise-polyfill.js"></script>
+    <link href="../plugins/sweetalerts/sweetalert.css" rel="stylesheet" type="text/css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700" rel="stylesheet" />
+    <style>
+        /*------ Google Font Style ------ */
+        body {font-family:'Roboto'!important;}
+    </style>
+
+    <script>
+        function noticePop( value, type ){
+            swal({
+                html: '<span style="font-size:18px!important;">'+ `${value}` +'</span>',
+                type: `${type}`,
+                timer: 4000,
+                showConfirmButton: false,
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+            }).then(function(){
+                window.location.href = 'trading-stock';
+            });
+        }
+    </script>
+
+<body style="background-color:#070707; color:#B3B3B3;" class="sidebar-main-active right-column-fixed">
+    <!-- ============= Navbar ========== -->
+    <section class="navbar-top">
+      <div class="container">
+        <div class="navbar-left">
+         <a href="navbarPage"  > <img src="assets/vector/hamburger.svg" alt="hamburger" class="hamburger" id="btn" /></a>
+        <!-- <a href="profile" class="d-flex"><img src="assets/image/avatar.png" alt="avatar" class="profile" /></a>
+        </div>-->
+        <div class="navbar-right"></div>
+      </div>
+    </section>
+    <!-- ======= End Navbar ======== -->
+    <!-- loader Start -->
+    <!--<div id="loading">
+        <div id="loading-center">
+        </div>
+    </div>-->
+    <!-- loader END -->
+    <!-- Wrapper Start -->
+    <div class="wrapper">
+        
+        <!-- Page Content  -->
+       <!-- <div id="content-page" class="content-page" style="margin-top:80px;">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 col-lg-9">
+                        <div class="iq-card">
+                            <div class="iq-card" style="background-color:#2A2929; color:#B3B3B3; ">
+                                <div class="iq-card-header d-flex justify-content-between">
+                                    <div class="iq-header-title">
+                                        <h4 class="card-title" style="color:white;: 'Roboto'!important;">Stock Trading</h4>-->
+                                    </div>
+                                </div>
+                                <div class="iq-card-body">
+
+                                    <p style="font-size:25px; text-align:center;"><b>Add Stock Trade</b></p>
+                                    <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_6ada7"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/AAPL/" rel="noopener" target="_blank"><span class="blue-text"></span></a>Stocks View</div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
+  new TradingView.MediumWidget(
+  {
+  "symbols": [
+    [
+      "Apple",
+      "AAPL|1D"
+    ],
+    [
+      "Google",
+      "GOOGL|1D"
+    ],
+    [
+      "Microsoft",
+      "MSFT|1D"
+    ],
+    [
+      "Meta",
+      "NASDAQ:META|1D"
+    ],
+    [
+      "Netflix",
+      "NASDAQ:NFLX|1D"
+    ]
+  ],
+  "chartOnly": false,
+  "width": "100%",
+  "height": "200",
+  "locale": "en",
+  "colorTheme": "dark",
+  "autosize": true,
+  "showVolume": false,
+  "hideDateRanges": false,
+  "hideMarketStatus": false,
+  "scalePosition": "right",
+  "scaleMode": "Normal",
+  "fontFamily": "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
+  "fontSize": "10",
+  "noTimeScale": false,
+  "valuesTracking": "1",
+  "changeMode": "price-and-percent",
+  "chartType": "line",
+  "backgroundColor": "rgba(255, 255, 255, 0)",
+  "container_id": "tradingview_6ada7"
+}
+  );
+  </script>
+</div>
+<!-- TradingView Widget END -->
+                                    <form action="/trading-stock/<%=user._id%>" method="POST" autocomplete="off" class="was-validated">
+                                        <div class="row">
+                         <div class="form-group col-md-4 mb-3">
+                        <label style="color:#B3B3B3;">Stock Ticker</label>
+                      <select name="stock" id="stock" class="form-control" required>
+                        <option value="TSLA" style="font-size:20px;">TSLA</option>
+                        <option value="PFE" style="font-size:20px;">PFE</option>
+                       <option value="ROKU" style="font-size:20px;">ROKU</option>
+                        <option value="MRNA" style="font-size:20px;">MRNA</option>
+                        <option value="PINS" style="font-size:20px;">PINS</option>
+                        <option value="ON" style="font-size:20px;">ON</option>
+                        <option value="DKNG" style="font-size:20px;">DKNG</option>
+                        <option value="UBER" style="font-size:20px;">UBER</option>
+                        <option value="COIN" style="font-size:20px;">COIN</option>
+                        <option value="APPS" style="font-size:20px;">A
+                        <option value="QCOM" style="font-size:20px;">QCOM</option>
+                        <option value="CRSR" style="font-size:20px;">CRSR</option>
+                        <option value="PENN" style="font-size:20px;">PENN</option>
+                        <option value="SKLZ" style="font-size:20px;">SKLZ</option>
+                           <option value="PCG" style="font-size:20px;">PCG</option>
+                        <option value="CVS" style="font-size:20px;">CVS</option>
+                        <option value="TRVG" style="font-size:20px;">TRVG</option>
+                        <option value="CRNT" style="font-size:20px;">CRNT</option>
+                        <option value="ABNB" style="font-size:20px;">ABNB</option>
+                        <option value="ATVI" style="font-size:20px;">ATVI</option>
+                        <option value="MRO" style="font-size:20px;">MRO</option>
+                        <option value="MELI" style="font-size:20px;">MELI</option>
+                        <option value="DVN" style="font-size:20px;">DVN</option>
+                        <option value="FANG" style="font-size:20px;">FANG</option>
+                        <option value="BP" style="font-size:20px;">BP</option>
+                        <option value="PTON" style="font-size:20px;">PTON</option>
+                        <option value="CGC" style="font-size:20px;">CGC</option>
+                        <option value="VIAC" style="font-size:20px;">VIAC</option>
+                        <option value="AMG" style="font-size:20px;">AMG</option>
+                        <option value="FSLY" style="font-size:20px;">FSLY</option>
+                        <option value="UAA" style="font-size:20px;">UAA</option>
+                        <option value="EPD" style="font-size:20px;">
+                        <option value="ET" style="font-size:20px;">ET</option>
+                        <option value="NET" style="font-size:20px;">NET</option>
+                        <option value="AKTS" style="font-size:20px;">AKTS</option>
+                        <option value="ZG" style="font-size:20px;">ZG</option>
+                        <option value="GNRC" style="font-size:20px;">GNRC</option>
+                        <option value="ALX" style="font-size:20px;">ALX</option>
+                        <option value="CNA" style="font-size:20px;">CNA</option>
+                         <option value="TMUS" style="font-size:20px;">TMUS</option>
+                         <option value="SKC" style="font-size:20px;">SKC</option>
+                         <option value="RIG" style="font-size:20px;">RIG</option>
+                         <option value="APPL" style="font-size:20px;">APPL</option>
+                         <option value="MSFT" style="font-size:20px;">MSFT</option>
+                         <option value="GOOG" style="font-size:20px;">GOOG
+                         <option value="AMZN" style="font-size:20px;">AMZN</option>
+                         <option value="FB" style="font-size:20px;">FB</option>
+                         <option value="TSM" style="font-size:20px;">TSM</option>
+                         <option value="DXCM" style="font-size:20px;">DXCM</option>
+                         <option value="NVDA" style="font-size:20px;">NVDA</option>
+                         <option value="JNJ" style="font-size:20px;">JNJ</option>
+                         <option value="UNH" style="font-size:20px;">UNH</option>
+                         <option value="V" style="font-size:20px;">V</option>
+                         <option value="XOM" style="font-size:20px;">XOM</option>
+                         <option value="JPM" style="font-size:20px;">
+                         <option value="MA" style="font-size:20px;">MA</option>
+                         <option value="CVX" style="font-size:20px;">CVX</option>
+                         <option value="PG" style="font-size:20px;">PG</option>
+                         <option value="WMT" style="font-size:20px;">WMT</option>
+                         <option value="BAC" style="font-size:20px;">BAC</option>
+                        <option value="HD" style="font-size:20px;">HD</option>
+                        <option value="PFE" style="font-size:20px;">PFE</option>
+                        <option value="LLY" style="font-size:20px;">LLY</option>
+                        <option value="BABA" style="font-size:20px;">BABA</option>
+                        <option value="KO" style="font-size:20px;">KO</option>
+                        <option value="GOOGL" style="font-size:20px;">GOOGL</option>
+                        <option value="NVO" style="font-size:20px;">NVO</option>
+                        <option value="ABBV" style="font-size:20px;">ABBV</option>
+                        <option value="AVGO" style="font-size:20px;">AVGO</option>
+                        <option value="ASML" style="font-size:20px;">ASML</option>
+                        <option value="PEP" style="font-size:20px;">PEP</option>
+                        <option value="SHEL" style="font-size:20px;">SHEL</option>
+                        <option value="MRK" style="font-size:20px;">MRK</option>
+                        <option value="TM" style="font-size:20px;">TM</option>
+                        <option value="TMO" style="font-size:20px;">
+                        <option value="VZ" style="font-size:20px;">VZ</option>
+                        <option value="COST" style="font-size:20px;">COST</option>
+                        <option value="ADBE" style="font-size:20px;">ADBE</option>
+                        <option value="ABT" style="font-size:20px;">ABT</option>
+                        <option value="AZN" style="font-size:20px;">AZN
+                        <option value="DIS" style="font-size:20px;">DIS</option>
+                        <option value="DHR" style="font-size:20px;">DHR</option>
+                         <option value="ACN" style="font-size:20px;">ACN</option>
+                        <option value="ORCL" style="font-size:20px;">ORCL</option>
+                        <option value="NKE" style="font-size:20px;">NKE</option>
+                        <option value="CMCSA" style="font-size:20px;">CMCSA</option>
+                        <option value="CSCO" style="font-size:20px;">CSCO</option>
+                        <option value="CRM" style="font-size:20px;">CRM</option>
+                        <option value="MCD" style="font-size:20px;">MCD</option>
+                        <option value="INTC" style="font-size:20px;">INTC</option>
+                        <option value="BHP" style="font-size:20px;">BHP</option>
+                        <option value="TMUS" style="font-size:20px;">TMUS</option>
+                        <option value="WFC" style="font-size:20px;">WFC</option>
+                        <option value="AMD" style="font-size:20px;">AMD</option>
+                        <option value="LIN" style="font-size:20px;">LIN</option>
+                        <option value="PM" style="font-size:20px;">PM</option>
+                        <option value="BMY" style="font-size:20px;">BMY</option>
+                        <option value="UPS" style="font-size:20px;">UPS</option>
+                        <option value="QCOM" style="font-size:20px;">QCOM</option>
+                        <option value="COP" style="font-size:20px;">COP</option>
+                        <option value="NEE" style="font-size:20px;">NEE</option>
+                        <option value="TXN" style="font-size:20px;">TXN</option>
+                        <option value="TTE" style="font-size:20px;">TTE</option>
+                        <option value="T" style="font-size:20px;">T</option>
+                        <option value="RTX" style="font-size:20px;">RTX</option>
+                        <option value="MS" style="font-size:20px;">MS</option>
+                        <option value="RY" style="font-size:20px;">RY</option>
+                        <option value="UNP" style="font-size:20px;">UNP</option>
+                        <option value="HON" style="font-size:20px;">HON</option>
+                        <option value="HSBC" style="font-size:20px;">HSBC</option>
+                        <option value="AMGN" style="font-size:20px;">AMGN</option>
+                        <option value="IBM" style="font-size:20px;">IBM</option>
+                        <option value="MDT" style="font-size:20px;">MDT</option>
+                        <option value="SCHW" style="font-size:20px;">SCHW</option>
+                        <option value="RIO" style="font-size:20px;">RIO</option>
+                        <option value="AXP" style="font-size:20px;">AXP</option>
+                        <option value="CVS" style="font-size:20px;">CVS</option>
+                        <option value="LOW" style="font-size:20px;">LOW</option>
+                        <option value="EQNR" style="font-size:20px;">EQNR</option>
+                        <option value="AMT" style="font-size:20px;">AMT</option>
+                        <option value="LMT" style="font-size:20px;">LMT</option>
+                        <option value="CAT" style="font-size:20px;">CAT</option>
+                        <option value="ANTM" style="font-size:20px;">ANTM</option>
+                        <option value="SAP" style="font-size:20px;">SAP</option>
+                        <option value="UL" style="font-size:20px;">UL</option>
+                        <option value="INTU" style="font-size:20px;">INTU</option>
+                        <option value="SPGI" style="font-size:20px;">SPGI</option>
+                        <option value="SONY" style="font-size:20px;">S
+                        <option value="GSK" style="font-size:20px;">GSK</option>
+                        <option value="DE" style="font-size:20px;">DE</option>
+                        <option value="BP" style="font-size:20px;">BP</option>
+                        <option value="GS" style="font-size:20px;">GS</option>
+                        <option value="HDB" style="font-size:20px;">HDB</option>
+                        <option value="DEO" style="font-size:20px;">DEO</option>
+                        <option value="BLK" style="font-size:20px;">BLK
+                        <option value="PYPL" style="font-size:20px;">PYPL</option>
+                        <option value="BTI" style="font-size:20px;">BTI</option>
+                        <option value="NOW" style="font-size:20px;">NOW</option>
+                        <option value="C" style="font-size:20px;">C</option>
+                        <option value="AMAT" style="font-size:20px;">AMAT</option>
+                        <option value="PTR" style="font-size:20px;">PTR</option>
+                        <option value="CHTR" style="font-size:20px;">CHTR</option>
+                        <option value="BUD" style="font-size:20px;">BUD</option>
+                        <option value="MO" style="font-size:20px;">MO</option>
+                        <option value="MO" style="font-size:20px;">MO</option>
+                        <option value="EL" style="font-size:20px;">EL</option>
+                        <option value="JD" style="font-size:20px;">JD</option>
+                        <option value="ENB" style="font-size:20px;">ENB</option>
+                        <option value="PLD" style="font-size:20px;">PLD</option>
+                        <option value="BKNG" style="font-size:20px;">BKNG</option>
+                        <option value="ADP" style="font-size:20px;">ADP</option>
+                        <option value="SBUX" style="font-size:20px;">SBUX</option>
+                        <option value="PBR" style="font-size:20px;">PBR</option>
+                        <option value="CB" style="font-size:20px;">CB</option>
+                        <option value="VALE" style="font-size:20px;">VALE</option>
+                        <option value="NFLX" style="font-size:20px;">NFLX</option>
+                        <option value="MDLZ" style="font-size:20px;">MDLZ</option>
+                        <option value="BX" style="font-size:20px;">BX</option>
+                        <option value="SYK" style="font-size:20px;">SYK</option>
+                        <option value="ADI" style="font-size:20px;">ADI</option>
+                        <option value="DUK" style="font-size:20px;">DUK</option>
+                        <option value="GE" style="font-size:20px;">GE</option>
+                        <option value="EOG" style="font-size:20px;">EOG</option>
+                        <option value="BAM" style="font-size:20px;">BAM</option>
+                        <option value="" style="font-size:20px;"></option>
+                        </select>
+            </div>
+            <div class="form-group col-md-4 mb-3">
+                <label style="color:#B3B3B3;">Amount</label>
+                 <input type="text" class="form-control is-invalid" name="amount" id="amount" placeholder="Enter Amount" required>
+             </div>
+            <div class="form-group col-md-4">
+                <label style="color:#B3B3B3;">Select Action</label>
+                <select name="action" id="action" class="form-control" required>
+                    <option value="BUY">BUY</option>
+                     <option value="SELL" selected>SELL</option>
+                </select>
+            </div>
+                <div class="form-group col-md-12">
+                     <button class="btn btn-primary btn-lg btn-block" name="stock_trading" type="submit">Execute Stock Trade</button>
+                 </div>
+             </div>
+         </form>
+                                    
+         <hr>
+                                    <p style="font-size:25px; text-align:center;"><b>Recent Stock Trading History</b></p>
+                                    <div class="table-responsive">
+                                        <%if(user.stocktrades != ''){%>
+                                        <table id="user-list-table" class="table table-striped table-bordered mt-4" role="grid" aria-describedby="user-list-page-info">
+                                            <thead>
+                                                <tr>
+                                                    <th style="color:#B3B3B3;">Stock Ticker</th>
+                                                    <th style="color:#B3B3B3;">Trading Action</th>
+                                                    <th style="color:#B3B3B3;">Amount</th>
+                                                    <th style="color:#B3B3B3;">Status</th>
+                                                    <th style="color:#B3B3B3;">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody style="background-color:#2A2929;" >
+                                                <% if(user.stocktrades ){ %>
+                                                    <%user.stocktrades.forEach(element => {  %>
+                                                <tr>
+                                                    <th style="color:#B3B3B3;"><%=element.name%></th>
+                                                    <th style="color:#B3B3B3;"><%=element.tradeAction%></th>
+                                                    <th style="color:#B3B3B3;"><%=element.amount%></th>
+                                                    <th style="color:#B3B3B3;"><%=element.status%></th>
+                                                    <th style="color:#B3B3B3;"><%=element.action%></th>
+                                                </tr>
+                                                <%  }) %>
+                                                <%  } %>
+                                               </tbody>
+                                        </table>
+                                        <% }else{%>
+                                            <h4 class="text-center text-secondary mt-5">No stocks trade found!</h4>
+                                            <% } %>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Wrapper END -->
+
+    <!-- Optional JavaScript -->
+    <script src="../plugins/jquery-3.1.1.min.js"></script>
+    <script src="../plugins/sweetalerts/sweetalert2.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!--<script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>-->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Appear JavaScript -->
+    <script src="js/jquery.appear.js"></script>
+    <!-- Countdown JavaScript -->
+    <script src="js/countdown.min.js"></script>
+    <!-- Counterup JavaScript -->
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <!-- Wow JavaScript -->
+    <script src="js/wow.min.js"></script>
+    <!-- Apexcharts JavaScript -->
+    <script src="js/apexcharts.js"></script>
+    <!-- Slick JavaScript -->
+    <script src="js/slick.min.js"></script>
+    <!-- Select2 JavaScript -->
+    <script src="js/select2.min.js"></script>
+    <!-- Owl Carousel JavaScript -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- Magnific Popup JavaScript -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- Smooth Scrollbar JavaScript -->
+    <script src="js/smooth-scrollbar.js"></script>
+    <!-- lottie JavaScript -->
+    <script src="js/lottie.js"></script>
+    <!-- am core JavaScript -->
+    <script src="js/core.js"></script>
+    <!-- am charts JavaScript -->
+    <script src="js/charts.js"></script>
+    <!-- am animated JavaScript -->
+    <script src="js/animated.js"></script>
+    <!-- am kelly JavaScript -->
+    <script src="js/kelly.js"></script>
+    <!-- am maps JavaScript -->
+    <script src="js/maps.js"></script>
+    <!-- am worldLow JavaScript -->
+    <script src="js/worldLow.js"></script>
+    <!-- Style Customizer -->
+    <script src="js/style-customizer.js"></script>
+    <!-- Chart Custom JavaScript -->
+    <script src="js/chart-custom.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/custom.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            
+        });
+        
+        // BASE URL and API Inclusion
+        const BASE_URL = 'https://tradetips-analysis.live/';
+        const API = `${BASE_URL}api/users.php`;
+
+        function CloseTrade( trading_id, status ){
+            $.ajax({
+                url: API,
+                type: 'POST',
+                //dataType: 'JSON',
+                data: {
+                    close_trading: 'close_trading',
+                    trading_option: 'stock',
+                    trading_id: trading_id,
+                    status: status
+                },
+                cache: false
+            }).done( function( result ){
+                if ( result.error == false && result.notice == 'changed' ){
+                    noticePop( result.message, 'success' );
+                }
+                else if ( result.error == true && result.notice == 'failed' ){
+                    noticePop( result.message, 'error' );
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
+<%- include('partials/dashboardFooter')%>
