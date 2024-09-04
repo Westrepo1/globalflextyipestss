@@ -42,23 +42,23 @@ const userSchema = new mongoose.Schema({
     }, 
     balance:{
         type: String,
-        default: "$0.00"
+        default: "0.00"
     },
     available:{
         type: String,
-        default: "$0.00"
+        default: "0.00"
     },
     bonus:{
         type: String,
-        default: "$0.00"
+        default: "0.00"
     },
     widthdrawBalance:{
         type: String,
-        default: "$0.00"
+        default: "0.00"
     },
     profit:{
         type: String,
-        default: "$0.00"
+        default: "0.00"
     },
     totalDeposit:{
         type: String,
