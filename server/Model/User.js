@@ -17,7 +17,9 @@ const userSchema = new mongoose.Schema({
         required: validator.isEmail['Please enter an email']
         // required:  [isEmail, 'Please enter an email']
     },
-  
+  currency:{
+        type: String
+    },
     country:{
         type: String
     },
