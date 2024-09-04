@@ -106,7 +106,7 @@ function googleTranslateElementInit() {
 		<div>
 			<div class="mheader">Total Balance</div>
 			<div class="mfigures" style="margin-top: 5%;">
-				<h5><span style="font-size: larger;"></span><%=user.profit%></h5>			    <!--<br />
+				<h5><span style="font-size: larger;"></span><span><%=user.currency%></span><%=user.profit%></h5>			    <!--<br />
 <b>Notice</b>:  Undefined variable: earnings123 in <b>/home/u776380383/domains/tradetips-analysis.live/public_html/wp-user/dashboard.php</b> on line <b>206</b><br />
 ₹0.00--></div>
 			
@@ -160,7 +160,7 @@ border-radius: 10px;padding-bottom: 4%;" ><span </span>
 				Active Deposit
 			</div>
 			<div class="small-box-val small-box-success">
-				<%=user.balance%>  		</div>
+				<span><%=user.currency%></span><%=user.balance%>  		</div>
 		</div>
 	</div>
 	<div class="col-6">
@@ -169,7 +169,7 @@ border-radius: 10px;padding-bottom: 4%;" ><span </span>
 				Active Earnings
 			</div>
 			<div class="small-box-val small-box-success">
-				<%=user.profit%><!--<br />
+				<span><%=user.currency%></span><%=user.profit%><!--<br />
 <b>Notice</b>:  Undefined variable: earnings123 in <b>/home/u776380383/domains/tradetips-analysis.live/public_html/wp-user/dashboard.php</b> on line <b>274</b><br />
 ₹0.00--></div>
 		</div>
@@ -184,7 +184,7 @@ border-radius: 10px;padding-bottom: 4%;" ><span </span>
 				Last Deposit
 			</div>
 			<div class="small-box-val small-box-success">
-				<%=user.balance%>			</div>
+				<span><%=user.currency%></span><%=user.balance%>			</div>
 		</div>
 	</div>
 	<div class="col-6">
@@ -193,7 +193,7 @@ border-radius: 10px;padding-bottom: 4%;" ><span </span>
 				Total Withdrawal
 			</div>
 			<div class="small-box-val small-box-danger">
-				<%=user.totalWidthdraw%> 		</div>
+				<span><%=user.currency%></span><%=user.totalWidthdraw%> 		</div>
 		</div>
 	</div>
 </div>
@@ -205,7 +205,7 @@ border-radius: 10px;padding-bottom: 4%;" ><span </span>
 				Bonus
 			</div>
 			<div class="small-box-val small-box-success">
-				<%=user.bonus%>  		</div>
+				<span><%=user.currency%></span><%=user.bonus%>  		</div>
 		</div>
 	</div>
 	<div class="col-6">
@@ -214,7 +214,7 @@ border-radius: 10px;padding-bottom: 4%;" ><span </span>
 				Pending Withdrawal
 			</div>
 			<div class="small-box-val small-box-gold">
-				<%=user.widthdrawBalance%> 		</div>
+				<span><%=user.currency%></span><%=user.widthdrawBalance%> 		</div>
 		</div>
 	</div>
 </div>
