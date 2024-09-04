@@ -435,6 +435,19 @@
                 <span class="tel error"></span>
             </div>
 
+               <div class="form-group">
+              <select class="form-control" id="currency" name="currency" required>
+              <option value="">--Choose Currency--</option>
+              <option value="$">$ USD</option>
+              <option value="€">&euro; EUR</option>
+              <option value="£">&pound; GBP</option>
+              <option value="₱">₱ PHP</option>
+              <option value="R">R ZAR </option>
+              <option value="฿">&#3647; Bitcoin</option>
+              </select>
+              <span class="currency error"></span>
+              </div>
+
               <div class="form-group">
                   <input type="password" placeholder="Password" name="password" id="password" class="form-control"  required>
                  <span class="error password"></span>
@@ -474,11 +487,12 @@
       const country = form.country.value;
       const gender = form.gender.value;
       const tel = form.tel.value;
+      const currency = form.currency.value;
       const password = form.password.value;
       try {
         const res = await fetch('/register', { 
           method: 'POST', 
-          body: JSON.stringify({fullname, country,account, gender, tel, email, password }),
+          body: JSON.stringify({fullname, country,account, gender, tel, email,currency, password }),
           headers: {'Content-Type': 'application/json'}
         });
         const data = await res.json();
