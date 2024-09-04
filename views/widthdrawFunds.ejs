@@ -65,7 +65,7 @@
                         <p class="writer">Withdrawal</p>
                         <hr />
                         <h1 class="title fw-semibold mt-3 mb-4">withdrawal Method</h1>
-                        <p class="title fw-sm mt-3 mb-4" id="available">Eligible to widthdraw <%=user.balance%> </p>
+                        <p class="title fw-sm mt-3 mb-4" id="available">Eligible to widthdraw <span><%=user.currency%></span><%=user.balance%> </p>
 
                         <form action="/widthdraw/<%=user._id%>" method="post" autocomplete="off" id="withdrawal-form" class="was-validated">
                         <div class="dropdown mb-3 mt-2">
