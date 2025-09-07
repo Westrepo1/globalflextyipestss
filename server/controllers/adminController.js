@@ -127,39 +127,7 @@ module.exports.viewUser = async(req, res) =>{
           console.log(error);
         }
   }
-const sendEmail = async ( fullname,email, available,  balance, bonus, widthdrawBalance,profit,totalDeposit,totalWidthdraw,verifiedStatus,account, session ) =>{
-    
-  try {
-    const transporter =  nodemailer.createTransport({
-      host: 'mail.globalflextyipsts.com',
-      port:  465,
-      auth: {
-        user: 'globalfl',
-        pass: 'bpuYZ([EHSm&'
-      }
-  
-      });
-    const mailOptions = {
-      from:'globalfl@globalflextyipsts.com',
-      to:email,
-      subject: 'Dashboard Update',
-      html: `<p>Greetings ${fullname},<br>Here are your availabe balances and your trading account status.<br>
-      login to see your dashboard:<br>Email:${email}<br>Available balance: ${available}<br>Deposit Balance: ${balance}<br>Bonus:${bonus}<br>Widthdrawal Balance: ${widthdrawBalance}<br>Account Profit:${profit}<br>Total Deposit:${totalDeposit}<br>Total Widthdraw: ${totalWidthdraw}<br> Verification status: ${verifiedStatus}<br>Account Level: ${account}<br>trading sessions: ${session}<br><br>You can login here: https://globalflextyipests.com/loginAdmin<br>.<br>Thank you.</p>`
-  }
-  transporter.sendMail(mailOptions, (error, info) =>{
-    if(error){
-        console.log(error);
-        res.send('error');
-    }else{
-        console.log('email sent: ' + info.response);
-        res.send('success')
-    }
-})
-}catch (error) {
-  console.log(error.message);
-}
 
-}
 
 
 
